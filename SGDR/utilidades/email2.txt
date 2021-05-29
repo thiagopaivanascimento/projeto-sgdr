@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html> 
+<head> 
+   <title>Envie-nos os seus comentários</title> 
+</head> 
+
+<body bgcolor="#cccc66" text="#003300" link="#006060" vlink="#006060"> 
+<? 
+if (!$_POST){ 
+?> 
+<form action="envia_form_php.php" method=post> 
+Nome: <input type=text name="nome" size=16> 
+<br> 
+Email: <input type=text name=email size=16> 
+<br> 
+Comentários: <textarea name=coment cols=32 rows=6></textarea> 
+<br> 
+<input type=submit value="Enviar"> 
+</form> 
+<? 
+}else{ 
+   //Estou a receber o formulário, componho o corpo 
+   $corpo = "Formulário enviado\n"; 
+   $corpo .= "Nome: " . $_POST["nome"] . "\n"; 
+   $corpo .= "Email: " . $_POST["email"] . "\n"; 
+   $corpo .= "Comentários: " . $_POST["coment"] . "\n"; 
+
+   //envio o correio... 
+   mail("admin@seudominio.com","Formulário recebido",$corpo); 
+
+   //agradeço pelo envio 
+    "Obrigado por preencher o formulário. Foi enviado corretamente."; 
+} 
+?> 
+</body> 
+</html>

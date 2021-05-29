@@ -1,0 +1,135 @@
+ {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+BODY {
+	FONT: 11pt Verdana, Arial, Helvetica, sans-serif; COLOR: #000000
+}
+A:link {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+IMG {
+	DISPLAY: none
+}
+.noprint {
+	DISPLAY: none
+}
+#sub-header {
+	DISPLAY: none
+}
+#sub-footer {
+	DISPLAY: none
+}
+.navbar {
+	DISPLAY: none
+}
+.box1 {
+	DISPLAY: none
+}
+.divider {
+	DISPLAY: none
+}
+.signature {
+	DISPLAY: none
+}
+#wrap {
+	MARGIN: 0px 2em
+}
+P {
+	FONT-SIZE: 85%
+}
+.copyright {
+	FONT-SIZE: 75%
+}
+.page-number {
+	FONT-SIZE: 75%; FLOAT: right; WIDTH: auto; TEXT-ALIGN: right
+}
+H1 {
+	FONT-WEIGHT: bold; BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #000000; FONT-FAMILY: "Trebuchet MS",georgia,Verdana,Sans-serif; TEXT-DECORATION: none
+}
+H2 {
+	FONT-WEIGHT: bold; BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #000000; FONT-FAMILY: "Trebuchet MS",georgia,Verdana,Sans-serif; TEXT-DECORATION: none
+}
+H3 {
+	FONT-WEIGHT: bold; BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #000000; FONT-FAMILY: "Trebuchet MS",georgia,Verdana,Sans-serif; TEXT-DECORATION: none
+}
+H1 A {
+	FONT-WEIGHT: bold; BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #000000; FONT-FAMILY: "Trebuchet MS",georgia,Verdana,Sans-serif; TEXT-DECORATION: none
+}
+H2 A {
+	FONT-WEIGHT: bold; BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #000000; FONT-FAMILY: "Trebuchet MS",georgia,Verdana,Sans-serif; TEXT-DECORATION: none
+}
+H3 A {
+	FONT-WEIGHT: bold; BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #000000; FONT-FAMILY: "Trebuchet MS",georgia,Verdana,Sans-serif; TEXT-DECORATION: none
+}
+H1 {
+	FONT-SIZE: 20pt
+}
+H2 {
+	MARGIN-TOP: 1em; FONT-SIZE: 16pt
+}
+H3 {
+	MARGIN-TOP: 1em; FONT-SIZE: 14pt
+}
+.content {
+	FONT-SIZE: 11pt; MARGIN-BOTTOM: 1em; OVERFLOW: hidden; LINE-HEIGHT: 14pt; FONT-FAMILY: "Lucida Grande", "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif
+}
+.postbody A:link {
+	PADDING-RIGHT: 0.2em; PADDING-LEFT: 0.2em; FONT-SIZE: 100%; BACKGROUND: none transparent scroll repeat 0% 0%; PADDING-BOTTOM: 0.1em; MARGIN: -0.1em -0.2em; COLOR: #666; PADDING-TOP: 0.1em; TEXT-DECORATION: underline
+}
+.postbody A:visited {
+	PADDING-RIGHT: 0.2em; PADDING-LEFT: 0.2em; FONT-SIZE: 100%; BACKGROUND: none transparent scroll repeat 0% 0%; PADDING-BOTTOM: 0.1em; MARGIN: -0.1em -0.2em; COLOR: #666; PADDING-TOP: 0.1em; TEXT-DECORATION: underline
+}
+.postbody A:active {
+	PADDING-RIGHT: 0.2em; PADDING-LEFT: 0.2em; FONT-SIZE: 100%; BACKGROUND: none transparent scroll repeat 0% 0%; PADDING-BOTTOM: 0.1em; MARGIN: -0.1em -0.2em; COLOR: #666; PADDING-TOP: 0.1em; TEXT-DECORATION: underline
+}
+.postbody A:hover {
+	PADDING-RIGHT: 0.2em; PADDING-LEFT: 0.2em; FONT-SIZE: 100%; BACKGROUND: none transparent scroll repeat 0% 0%; PADDING-BOTTOM: 0.1em; MARGIN: -0.1em -0.2em; COLOR: #666; PADDING-TOP: 0.1em; TEXT-DECORATION: underline
+}
+UNKNOWN {
+	FONT-SIZE: 90%; TEXT-DECORATION: none; content: " (" attr(href) ") "
+}
+HR {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; HEIGHT: 1px; BACKGROUND-COLOR: #999999; BORDER-RIGHT-WIDTH: 0px
+}
+.author {
+	FONT-SIZE: 75%; MARGIN-BOTTOM: 0.6em; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+.date {
+	FONT-SIZE: 75%; FLOAT: right; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; POSITION: relative; TEXT-ALIGN: right
+}
+UNKNOWN {
+	TEXT-DECORATION: none; content: ""
+}
+.postprofile {
+	DISPLAY: none
+}
+.grip-show {
+	DISPLAY: none
+}
+.postquote {
+	BORDER-RIGHT: #999999 1px solid; PADDING-RIGHT: 0.5em; BORDER-TOP: #999999 1px solid; PADDING-LEFT: 0.5em; FONT-SIZE: 85%; PADDING-BOTTOM: 0.5em; MARGIN: 1em 18% 1em 4%; BORDER-LEFT: #999999 1px solid; LINE-HEIGHT: 1.5em; PADDING-TOP: 0.5em; BORDER-BOTTOM: #999999 1px solid; POSITION: relative
+}
+.postquote IMG {
+	DISPLAY: none
+}
+.postquote SPAN {
+	DISPLAY: block
+}
+.postquote SPAN .postquote {
+	FONT-SIZE: 100%
+}
+.quote-by {
+	FONT-WEIGHT: bold
+}
+DIV.spacer {
+	CLEAR: both
+}
+.skip_link {
+	DISPLAY: none
+}
