@@ -1,6 +1,6 @@
-//Função de Máscara
+//FunÃ§Ã£o de MÃ¡scara
 
-//Máscara para CPF
+//MÃ¡scara para CPF
 function mascara_cpf() { 
 if(document.FormAluno.txtCPF.value.length == 3) { 
 document.FormAluno.txtCPF.value += '.'; 
@@ -12,7 +12,7 @@ if(document.FormAluno.txtCPF.value.length == 11) {
 document.FormAluno.txtCPF.value += '-'; 
 }
 }
-//Máscara para Telefone
+//MÃ¡scara para Telefone
 function mascara_telefone() {
 if(document.FormAluno.txtTel.value.length == 2) {
 document.FormAluno.txtTel.value += ' ';
@@ -21,13 +21,13 @@ if(document.FormAluno.txtTel.value.length == 7) {
 document.FormAluno.txtTel.value += '-';
 }
 }
-//Máscara para CEP
+//MÃ¡scara para CEP
 function mascara_cep() {
 if(document.FormAluno.txtCEP.value.length == 5) {
 document.FormAluno.txtCEP.value += '-';
 }
 }
-//Máscara para Data de Nascimento
+//MÃ¡scara para Data de Nascimento
 function mascara_txtNasc() {
 if(document.FormAluno.txtNasc.value.length == 2) {
 document.FormAluno.txtNasc.value += '/';
@@ -39,7 +39,7 @@ if(document.FormAluno.txtNasc.value.length == 5) {
 document.FormAluno.txtNasc.value += '/';
 }
 }
-//Máscara para Telefone Celular
+//MÃ¡scara para Telefone Celular
 function mascara_celular() {
 if(document.FormAluno.txtCel.value.length == 2) {
 document.FormAluno.txtCel.value += ' ';
@@ -55,7 +55,7 @@ if (vercpf(document.FormAluno.txtCPF.value)){
 	document.FormAluno.submit();
  }else{
 	errors="1";
-   if (errors) alert('CPF NÃO VÁLIDO');
+   if (errors) alert('CPF NÃ£O VÃLIDO');
       document.retorno = (errors == '');}}
         function vercpf (cpf) 
 {if (cpf.length != 11 || cpf == "00000000000" || cpf == "11111111111" || cpf == "22222222222" || cpf == "33333333333" || cpf == "44444444444" || cpf == "55555555555" || cpf == "66666666666" || cpf == "77777777777" || cpf == "88888888888" || cpf == "99999999999")
