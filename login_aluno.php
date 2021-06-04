@@ -118,7 +118,7 @@ hr {
 	<div id="menu">
 	 <ul>
 	  <li><a href="login_aluno.php">ALUNO</a></li>
-      <li><a href="index.php" name="conteudo">ADMINISTRA«√O</a></li>
+      <li><a href="index.php" name="conteudo">ADMINISTRAÔøΩÔøΩO</a></li>
       <li><a href="login_prof.php">PROFESSOR</a></li>
 	 </ul>
    </div>
@@ -131,7 +131,7 @@ hr {
 	 <br>
 	   <hr size="1">
 	 <?php
-$Entrar = $_POST['Entrar'];
+$Entrar = isset($_POST['Entrar']);
 if ($Entrar == 'Entrar') {
 	$txtLogin = $_POST['txtLogin'];
 	$txtSenha = $_POST['txtSenha'];
@@ -141,10 +141,10 @@ include 'conexao/conexao.php';
 $sql = "SELECT login, senha, nome from alunos where login='$txtLogin'";
 $res = pg_query($sql);
 	if (pg_num_rows($res)==0) {
-		echo "<script> alert('Usu·rio Inv·lido, tente novamente') </script>"; 
+		echo "<script> alert('Usu√°rio Inv√°lido, tente novamente') </script>"; 
 		}else{
 			if ($txtSenha != pg_fetch_result($res, 0, "senha")){
-				echo "<script> alert('Senha Inv·lida, tente novamente') </script>"; 
+				echo "<script> alert('Senha Inv√°lida, tente novamente') </script>"; 
 					}else{
 					$txtLogin  = pg_fetch_result($res, 0, 'login');
 					$txtSenha  = pg_fetch_result($res, 0, 'senha');
@@ -165,11 +165,11 @@ $res = pg_query($sql);
   <table align="center" cellpadding="2" cellspacing="2" width="240">
    <tr>
 	<td align="right">Login</td>
-	<td align="left"><input type="text" name="txtLogin" value="<?php echo $txtLogin; ?>" size="15" maxlength="10"></td>
+	<td align="left"><input type="text" name="txtLogin" value="<?php $txtLogin; ?>" size="15" maxlength="10"></td>
    </tr>
    <tr>
 	<td align="right">Senha</td>
-	<td align="left"><input type="password" name="txtSenha" value="<?php echo $txtSenha; ?>" size="15"></td>
+	<td align="left"><input type="password" name="txtSenha" value="<?php $txtSenha; ?>" size="15"></td>
   </tr>
   </table>
    <br>
@@ -184,7 +184,7 @@ $res = pg_query($sql);
 	</div>
   </div>
   <br>
-  <h3>SGDR - Sistema de Gerenciamento Did·tico Remoto</h3>
+  <h3>SGDR - Sistema de Gerenciamento Did√°tico Remoto</h3>
 </body>
 
 </html>

@@ -111,7 +111,7 @@ hr {
 
 <script type="text/javascript">
 function msg(){
-window.status = ":: SGDR - Sistema de Gerenciamneto Didático Remoto ::";
+window.status = ":: SGDR - Sistema de Gerenciamneto Didï¿½tico Remoto ::";
 return true;
 }
 </script>
@@ -123,7 +123,7 @@ return true;
 	<div id="menu">
 	 <ul>
 	  <li><a href="login_aluno.php" id="aluno">ALUNO</a></li>
-      <li><a href="index.php" id="adm">ADMINISTRAÇÃO</a></li>
+      <li><a href="index.php" id="adm">ADMINISTRAï¿½ï¿½O</a></li>
       <li><a href="login_prof.php" id="prof">PROFESSOR</a></li>
 	 </ul>
    </div>
@@ -136,44 +136,44 @@ return true;
 	 <br>
 	   <hr size="1">
 	 <?php
-    $Entrar = isset($_POST['Entrar']);
-   if ($Entrar == 'Entrar') {
-	$txtLogin = isset($_POST['txtLogin']);
-	$txtSenha = isset($_POST['txtSenha']);
+    	$Entrar = isset($_POST['Entrar']);
+   			if ($Entrar == 'Entrar') {
+				$txtLogin = isset($_POST['txtLogin']);
+				$txtSenha = isset($_POST['txtSenha']);
+			
+		include 'conexao/conexao.php';
 
-include 'conexao/conexao.php';
-
-$sql = "SELECT * from usuarios where login='$txtLogin'";
-$res = pg_query($sql);
-	if (pg_num_rows($res)==0) {
-		echo "<script> alert('Usuário Inválido, tente novamente') </script>"; 
-		}else{
-			if ($txtSenha != pg_fetch_result($res, 0, "senha")){
-				echo "<script> alert('Senha Inválida, tente novamente') </script>"; 
+		$sql = "SELECT * FROM usuarios WHERE login='$txtLogin'";
+		$res = pg_query($sql);
+				if (pg_num_rows($res) == 0) {
+					echo "<script> alert('UsuÃ¡rio InvÃ¡lido, tente novamente') </script>"; 
 					}else{
-					$txtLogin  = pg_fetch_result($res, 0, 'login');
-					$txtSenha  = pg_fetch_result($res, 0, 'senha');
-					$txtNome   = pg_fetch_result($res, 0, 'nome');
-					session_name('sistema');
-					session_start();
-					$_SESSION["login_usuario"] = $txtLogin;
-					$_SESSION["senha_usuario"] = $txtSenha;
-					$_SESSION["nome_usuario"] = $txtNome;
-					header ("Location: administracao.php");
-			}
-		}	
-	}	
+						if ($txtSenha != pg_fetch_result($res, 0, "senha")){
+							echo "<script> alert('Senha InvÃ¡lida, tente novamente') </script>"; 
+								}else{
+								$txtLogin  = pg_fetch_result($res, 0, 'login');
+								$txtSenha  = pg_fetch_result($res, 0, 'senha');
+								$txtNome   = pg_fetch_result($res, 0, 'nome');
+								session_name('sistema');
+								session_start();
+								$_SESSION["login_usuario"] = $txtLogin;
+								$_SESSION["senha_usuario"] = $txtSenha;
+								$_SESSION["nome_usuario"] = $txtNome;
+								header ("Location: administracao.php");
+						}
+					}	
+				}	
 
 ?>	   
    <form action="" method="POST" name"FormLogin">
   <table align="center" cellpadding="2" cellspacing="2" width="240">
    <tr>
 	<td align="right">Login</td>
-	<td align="left"><input type="text" name="txtLogin" value="<?php echo isset($txtLogin); ?>" size="15" maxlength="10"></td>
+	<td align="left"><input type="text" name="txtLogin" value="<?php echo $txtLogin; ?>" size="15" maxlength="10"></td>
    </tr>
    <tr>
 	<td align="right">Senha</td>
-	<td align="left"><input type="password" name="txtSenha" value="<?php echo isset($txtSenha); ?>" size="15" maxlength="10"></td>
+	<td align="left"><input type="password" name="txtSenha" value="<?php echo $txtSenha; ?>" size="15" maxlength="10"></td>
   </tr>
   </table>
    <br>
@@ -188,7 +188,7 @@ $res = pg_query($sql);
 	</div>
   </div>
   <br>
-  <h3>SGDR - Sistema de Gerenciamento Didático Remoto</h3>
+  <h3>SGDR - Sistema de Gerenciamento DidÃ¡tico Remoto</h3>
 </body>
 
 </html>
