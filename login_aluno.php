@@ -1,28 +1,27 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-
-<title>::EETEP - Secretaria Virtual::</title>
-
-<style type="text/css">
-<!--
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>::EETEP - Secretaria Virtual::</title>
+	<style type="text/css">
 
 body {
 	font-size: 11px;
-	font-family: Trebuchet MS','Arial;
-	margin: 100px; 
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	margin: 100px auto; 
 	padding: 0;
 	text-align: center;
 	}
 
 h3{
-   font-family: Trebuchet MS','Arial;
    color: #FFFFFF;
 }
 
 #tudo {
-	background: #FFF; 
-	width: 235px;
+	/*background: #FFF; */
+	width: 240px;
 	margin: auto;
 	padding: 0px;
 	text-align: left;
@@ -42,24 +41,24 @@ hr {
 }
 
 #menu {
-	height: 27px;
-	margin: 0; 
-	padding: 0;
+	height: 25px;
+	margin-left: 15px; 
+	padding-bottom: 8px;
 	background-color: #003366;
-	width: 240px;
-	}
+}
 
 
 #menu ul {
-	margin: 0; 
+	margin: 0 auto; 
 	padding: 0;
 	margin-left: 0;
-	}
+	margin-bottom: 10px;
+}
 
 
 #menu ul li {
 	display: inline;
-	}
+}
 
 
 #menu ul li a {
@@ -68,9 +67,10 @@ hr {
 	font-weight: bold;
 	float: left;
 	padding: 9px 7px;
-	margin: 1px;
+	margin: 0px;
 	margin-left: 1px;
 	text-decoration: none;
+	font-size: 11px;
 }
 
 
@@ -81,12 +81,14 @@ hr {
 }
 
 #conteudo {
-	margin-top: 10px;
+	margin-top: 1px;
 	clear: both;
 	font-size: 10px;
 	text-align: center;
 	font-family: Trebuchet MS','Arial;
 	width: 240px;
+	height: auto;
+	background-color: #FFFFFF;
 }
 
 .botao{
@@ -99,6 +101,8 @@ hr {
     font-weight: bold; 	 
 	border: 1px solid #999999;
 	text-decoration: none;
+	margin-left: 75px;
+    margin-bottom: 2px;
 }
 
 #rodape {
@@ -107,10 +111,9 @@ hr {
 	text-align: center;
 	width: 240px;
 }
--->
-</style>
 
-</head>
+	</style>
+ </head>
 
 <body bgcolor="#003366">
 <div align="center">
@@ -118,7 +121,7 @@ hr {
 	<div id="menu">
 	 <ul>
 	  <li><a href="login_aluno.php">ALUNO</a></li>
-      <li><a href="index.php" name="conteudo">ADMINISTRA��O</a></li>
+      <li><a href="index.php" name="conteudo">ADMIN</a></li>
       <li><a href="login_prof.php">PROFESSOR</a></li>
 	 </ul>
    </div>
@@ -186,5 +189,4 @@ $res = pg_query($sql);
   <br>
   <h3>SGDR - Sistema de Gerenciamento Didático Remoto</h3>
 </body>
-
 </html>
