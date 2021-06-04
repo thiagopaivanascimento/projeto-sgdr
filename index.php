@@ -1,3 +1,8 @@
+
+<?php 
+	//Definir tipo de charset ISO-8859-1
+	ini_set("default_charset", "UTF-8"); 
+?>
 <html>
 
 <head>
@@ -5,7 +10,7 @@
 <title>::EETEP - Secretaria Virtual::</title> 
 
 <style type="text/css">
-<!--
+
 
 body {
 	font-size: 11px;
@@ -106,7 +111,7 @@ hr {
 	text-align: center;
 	width: 240px;
 }
--->
+
 </style>
 
 <script type="text/javascript">
@@ -138,13 +143,14 @@ return true;
 	 <?php
     	$Entrar = isset($_POST['Entrar']);
    			if ($Entrar == 'Entrar') {
-				$txtLogin = isset($_POST['txtLogin']);
-				$txtSenha = isset($_POST['txtSenha']);
-			
+				$txtLogin = $_POST['txtLogin'];
+				$txtSenha = $_POST['txtSenha'];
+				//echo $txtLogin;
 		include 'conexao/conexao.php';
 
 		$sql = "SELECT * FROM usuarios WHERE login='$txtLogin'";
 		$res = pg_query($sql);
+		//var_dump($res);
 				if (pg_num_rows($res) == 0) {
 					echo "<script> alert('Usuário Inválido, tente novamente') </script>"; 
 					}else{
@@ -169,11 +175,11 @@ return true;
   <table align="center" cellpadding="2" cellspacing="2" width="240">
    <tr>
 	<td align="right">Login</td>
-	<td align="left"><input type="text" name="txtLogin" value="<?php echo $txtLogin; ?>" size="15" maxlength="10"></td>
+	<td align="left"><input type="text" name="txtLogin" value="<?php $txtLogin; ?>" size="15" maxlength="10"></td>
    </tr>
    <tr>
 	<td align="right">Senha</td>
-	<td align="left"><input type="password" name="txtSenha" value="<?php echo $txtSenha; ?>" size="15" maxlength="10"></td>
+	<td align="left"><input type="password" name="txtSenha" value="<?php $txtSenha; ?>" size="15" maxlength="10"></td>
   </tr>
   </table>
    <br>

@@ -1,10 +1,10 @@
 <?php
 
-$meses = array ("Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+$meses = array ("Janeiro", "Fevereiro", "MarÃ§o", "Abril", "Maio", "Junho",
                   "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro");
                   
-$semanas = array ("Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira",
-                      "Quinta-feira", "Sexta-feira", "Sábado");
+$semanas = array ("Domingo", "Segunda-feira", "TerÃ§a-feira", "Quarta-feira",
+                      "Quinta-feira", "Sexta-feira", "SÃ¡bado");
                       
 $sem = date ("w", time());
 $mes = date ("m", time());
