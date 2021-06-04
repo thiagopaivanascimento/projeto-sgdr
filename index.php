@@ -1,129 +1,28 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>::EETEP - Secretaria Virtual::</title>
 
-<title>::EETEP - Secretaria Virtual::</title> 
-
-<style type="text/css">
-<!--
-
-body {
-	font-size: 11px;
-	font-family: Trebuchet MS','Arial;
-	margin: 100px; 
-	padding: 0;
-	text-align: center;
-	}
-
-h3{
-   font-family: Trebuchet MS','Arial;
-   color: #FFFFFF;
-}
-
-#tudo {
-	background: #FFF; 
-	width: 235px;
-	margin: auto;
-	padding: 0px;
-	text-align: left;
-}
-
-#topo{
-	background-image: url(imagens/topo_secretaria.jpg);
-	width: 240px;
-	height: 30px;
-	text-align: center;
-}
-
-hr {
-	color: #5299C5;
-	margin-left: 5px; 
-	margin-right: 5px; 
-}
-
-#menu {
-	height: 27px;
-	margin: 0; 
-	padding: 0;
-	background-color: #5299C5;
-	width: 240px;
-	}
-
-
-#menu ul {
-	margin: 0; 
-	padding: 0;
-	margin-left: 0;
-	}
-
-
-#menu ul li {
-	display: inline;
-	}
-
-
-#menu ul li a {
-    background-image: url(imagens/back.gif);
-	color: #FFFFFF;
-	font-weight: bold;
-	float: left;
-	padding: 9px 7px;
-	margin: 1px;
-	margin-left: 1px;
-	text-decoration: none;
-}
-
-
-#menu ul li a:hover {
-	color: #FFFFFF;
-	text-decoration: underline;
-}
-
-#conteudo {
-	margin-top: 10px;
-	clear: both;
-	font-size: 10px;
-	text-align: center;
-	font-family: Trebuchet MS','Arial;
-	width: 240px;
-}
-
-.botao{
-	width: 80px;
-	height: 25px;
-	background-image: url(imagens/color_botao.jpg);
-	color: white;
-	font:  Trebuchet MS','Arial;
-	font-size: 14px;
-    font-weight: bold; 	 
-	border: 1px solid #5299C5;
-	text-decoration: none;
-}
-
-#rodape {
-	background-image: url(imagens/back.gif);
-	height: 30px;
-	text-align: center;
-	width: 240px;
-}
--->
-</style>
-
-<script type="text/javascript">
-function msg(){
-window.status = ":: SGDR - Sistema de Gerenciamneto Didático Remoto ::";
-return true;
-}
-</script>
+	<!--Estilo CSS-->
+	<link rel="stylesheet" type="text/css" href="css/estilo_principal.css" />
+	<!--JavaScript-->
+	<script type="text/javascript">
+		function msg(){
+		window.status = ":: SGDR - Sistema de Gerenciamneto DidÃ¡tico Remoto ::";
+		return true;
+		}
+	</script>
 </head>
-
 <body bgcolor="#5299C5" onLoad="msg()">
 <div align="center">
  <div id="tudo">
 	<div id="menu">
 	 <ul>
 	  <li><a href="login_aluno.php" id="aluno">ALUNO</a></li>
-      <li><a href="index.php" id="adm">ADMINISTRAÇÃO</a></li>
+      <li><a href="index.php" id="adm">ADMIN</a></li>
       <li><a href="login_prof.php" id="prof">PROFESSOR</a></li>
 	 </ul>
    </div>
@@ -146,10 +45,10 @@ include 'conexao/conexao.php';
 $sql = "SELECT * from usuarios where login='$txtLogin'";
 $res = pg_query($sql);
 	if (pg_num_rows($res)==0) {
-		echo "<script> alert('Usuário Inválido, tente novamente') </script>"; 
+		echo "<script> alert('UsuÃ¡rio InvÃ¡lido, tente novamente') </script>"; 
 		}else{
 			if ($txtSenha != pg_fetch_result($res, 0, "senha")){
-				echo "<script> alert('Senha Inválida, tente novamente') </script>"; 
+				echo "<script> alert('Senha InvÃ¡lida, tente novamente') </script>"; 
 					}else{
 					$txtLogin  = pg_fetch_result($res, 0, 'login');
 					$txtSenha  = pg_fetch_result($res, 0, 'senha');
@@ -188,7 +87,6 @@ $res = pg_query($sql);
 	</div>
   </div>
   <br>
-  <h3>SGDR - Sistema de Gerenciamento Didático Remoto</h3>
-</body>
-
+  <h3>SGDR - Sistema de Gerenciamento DidÃ¡tico Remoto</h3>	
+ </body>
 </html>

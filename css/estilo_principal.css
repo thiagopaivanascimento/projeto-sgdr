@@ -1,0 +1,102 @@
+body {
+	font-size: 11px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	margin: 100px auto; 
+	padding: 0;
+	text-align: center;
+	}
+
+h3{
+   color: #FFFFFF;
+}
+
+#tudo {
+	/*background: #FFF; */
+	width: 240px;
+	margin: 0 auto;
+	padding: 0px;
+	text-align: left;
+}
+
+#topo{
+	background-image: url(../imagens/topo_secretaria.jpg);
+	width: 240px;
+	height: 30px;
+	text-align: center;
+}
+
+hr {
+	color: #5299C5;
+	margin-left: 5px; 
+	margin-right: 5px; 
+}
+
+#menu {
+	height: 25px;
+	margin-left: 15px; 
+	padding-bottom: 8px;
+	background-color: #5299C5;
+	width: 240px;
+}
+
+
+#menu ul {
+	margin: 0px auto;
+	padding: 0px;
+    margin-left: 0;
+    margin-bottom: 10px;
+}
+
+
+#menu ul li {
+	display: inline;
+}
+
+
+#menu ul li a {
+    background-image: url(../imagens/back.gif);
+	color: #FFFFFF;
+	font-weight: bold;
+	float: left;
+	padding: 9px 7px;
+	margin: 0px;
+	margin-left: 1px;
+	text-decoration: none;
+    font-size: 11px;
+}
+
+
+#menu ul li a:hover {
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
+#conteudo {
+	margin-top: 1px;
+	clear: both;
+	font-size: 10px;
+	text-align: center;
+	width: 240px;
+    height: auto;
+    background-color: #FFFFFF;
+}
+
+.botao{
+	width: 80px;
+	height: 25px;
+	background-image: url(../imagens/color_botao.jpg);
+	color: white;
+	font-size: 12px;
+    font-weight: bold; 	 
+	border: 1px solid #5299C5;
+	text-decoration: none;
+    margin-left: 75px;
+    margin-bottom: 2px;
+}
+
+#rodape {
+	background-image: url(../imagens/back.gif);
+	height: 30px;
+	text-align: center;
+	width: 240px;
+}
