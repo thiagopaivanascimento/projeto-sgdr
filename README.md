@@ -1,4 +1,4 @@
-# SGDR - Sistema de Gerenciamento de Documentos Remotos
+# SGDR - Sistema de Gerenciamento de Documentos Remotos [Acadêmico]
 ![logo_sgdr-removebg-preview](https://user-images.githubusercontent.com/6005104/120896603-b4c06100-c5f8-11eb-88ec-7acd37070f8e.png)
 
 Projeto Acadêmico - Faculdade Simonsen Ano: 2008
