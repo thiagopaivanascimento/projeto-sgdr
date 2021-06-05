@@ -89,8 +89,8 @@
 		$sexo = $_POST["sexo"];
 		$txtNasc = $_POST["txtNasc"];
 		$civil = $_POST["civil"];
-		$txtNatural = $_POST["txtNatural"];
-		$txtNacional = $_POST["txtNacional"];
+		$txtNatural = isset($_POST["txtNatural"]);
+		$txtNacional = isset($_POST["txtNacional"]);
 		$txtEnd = $_POST["txtEnd"];
 		$txtBairro = $_POST["txtBairro"];
 		$txtCEP = $_POST["txtCEP"];
@@ -103,66 +103,68 @@
 		$txtInst = $_POST["txtInst"];
 		$txtCurso = $_POST["txtCurso"];
 		$turno = $_POST["turno"];
+		$turma = $_POST["turma"];
 		$login = $_POST["login"];
 		$senha = $_POST["senha"];
 		$nome = $_POST["nome"];
 	
 		if (empty($txtCPF)){
-			"<script> alert('- Por favor, informe o CPF.') </script>";
+			echo "<script> alert('- Por favor, informe o CPF.') </script>";
 		} else if (empty($txtRG)) { 
-			"<script> alert('- Por favor, informe a Identidade.') </script>";
+			echo "<script> alert('- Por favor, informe a Identidade.') </script>";
 		} else if (empty($txtOrgExp)) { 
-			"<script> alert('- Por favor, informe o Orgão Expedidor.') </script>";
+			echo "<script> alert('- Por favor, informe o Orgão Expedidor.') </script>";
 		} else if (empty($txtAluno)) { 
-			"<script> alert('- Por favor, informe o ALUNO(A).') </script>";
+			echo "<script> alert('- Por favor, informe o ALUNO(A).') </script>";
 		} else if (empty($sexo)) { 
-			"<script> alert('- Por favor, informe o SEXO.') </script>";
+			echo "<script> alert('- Por favor, informe o SEXO.') </script>";
 		} else if (empty($txtNasc)) { 
-			"<script> alert('- Por favor, informe a DATA de NASCIMENTO.') </script>";
+			echo "<script> alert('- Por favor, informe a DATA de NASCIMENTO.') </script>";
 		} else if (empty($civil)) { 
-			"<script> alert('- Por favor, informe o ESTADO CIVIL.') </script>";
+			echo "<script> alert('- Por favor, informe o ESTADO CIVIL.') </script>";
 		} else if (empty($txtEnd)) { 
-			"<script> alert('- Por favor, informe o ENDEREÇO.') </script>";
+			echo "<script> alert('- Por favor, informe o ENDEREÇO.') </script>";
 		} else if (empty($txtBairro)) { 
-			"<script> alert('- Por favor, informe o BAIRRO.') </script>";
+			echo "<script> alert('- Por favor, informe o BAIRRO.') </script>";
 	    } else if (empty($txtCEP)) { 
-			"<script> alert('- Por favor, informe o CEP.') </script>";
+			echo "<script> alert('- Por favor, informe o CEP.') </script>";
 		} else if (empty($txtCidade)) { 
-			"<script> alert('- Por favor, informe a CIDADE.') </script>";
+			echo "<script> alert('- Por favor, informe a CIDADE.') </script>";
 		} else if (empty($uf)) { 
-			"<script> alert('- Por favor, informe a UF.') </script>";
+			echo "<script> alert('- Por favor, informe a UF.') </script>";
 		} else if (empty($txtTel)) { 
-			"<script> alert('- Por favor, informe o TELEFONE RESIDENCIAL.') </script>";
+			echo "<script> alert('- Por favor, informe o TELEFONE RESIDENCIAL.') </script>";
 		} else if (empty($txtEmail)) { 
-			"<script> alert('- Por favor, informe o TELEFONE RESIDENCIAL.') </script>";
+			echo "<script> alert('- Por favor, informe o TELEFONE RESIDENCIAL.') </script>";
 	    } else if (empty($txtEnsMed)) { 
-			"<script> alert('- Por favor, informe o ENSINO MÉDIO.') </script>";
+			echo "<script> alert('- Por favor, informe o ENSINO MÉDIO.') </script>";
 		} else if (empty($txtInst)) { 
-			"<script> alert('- Por favor, informe a INSTITUIÇÃO.') </script>";
+			echo "<script> alert('- Por favor, informe a INSTITUIÇÃO.') </script>";
 		} else if (empty($txtCurso)) { 
-			"<script> alert('- Por favor, informe o CURSO.') </script>";	
+			echo "<script> alert('- Por favor, informe o CURSO.') </script>";	
 		} else if (empty($turno)) { 
-			"<script> alert('- Por favor, informe o TURNO.') </script>";
+			echo "<script> alert('- Por favor, informe o TURNO.') </script>";
 		} else if (empty($login)) { 
-			"<script> alert('- Por favor, informe o TURNO.') </script>";
+			echo "<script> alert('- Por favor, informe o TURNO.') </script>";
 		} else if (empty($senha)) { 
-			"<script> alert('- Por favor, informe o TURNO.') </script>";
+			echo "<script> alert('- Por favor, informe o TURNO.') </script>";
 		} else if (empty($nome)){ 
-			"<script> alert('- Por favor, informe o TURNO.') </script>";
+			echo "<script> alert('- Por favor, informe o TURNO.') </script>";
 		}	
 		if (!empty($txtCPF) and !empty($txtRG) and !empty($txtOrgExp) and !empty($txtAluno) and !empty($txtNasc) and !empty($sexo) and !empty($civil) and !empty($txtEnd) and !empty($txtBairro) and !empty($txtCEP) and !empty($txtCidade) and !empty($uf) and !empty($txtTel) and !empty($txtEnsMed) and !empty($txtInst) and !empty($txtEmail) and !empty($turno) and !empty($txtCurso)    and !empty($login) and !empty($senha) and !empty($nome)) {
 			$sql = "SELECT * from alunos where cpf = '$txtCPF' and login='$login'";
 			$res = pg_query($sql); 
 	 			if (pg_num_rows($res)){
-	  				"<script> alert('Aluno já cadastrado.') </script>";
+	  				echo "<script> alert('Aluno já cadastrado.') </script>";
 	   			} else {
-	     			$sql = "INSERT INTO alunos(cpf, rg, org_exp, aluno, nascimento, sexo, civil, endereco, bairro, cep, cidade, uf, telefone, celular, email, ens_med, instituicao,  curso, turno, turma, login, senha, nome) values ('$txtCPF', '$txtRG', '$txtOrgExp', '$txtAluno', '$txtNasc', '$sexo', '$civil', '$txtEnd', '$txtBairro', '$txtCEP', '$txtCidade', '$uf', '$txtTel', '$txtCel', '$txtEmail', '$txtEnsMed', '$txtInst', '$txtCurso', '$turno', '$turma',  '$login', '$senha', '$nome')";
-	     			$res = pg_query($sql);
+	     			$sql = "INSERT INTO alunos(
+						 cpf, rg, org_exp, aluno, nascimento, sexo, civil, naturalidade, nacionalidade, endereco, bairro, cep, cidade, uf, telefone, celular, email, ens_med, instituicao, curso, turno, turma, login, senha, nome) values ('$txtCPF', '$txtRG', '$txtOrgExp', '$txtAluno', '$txtNasc', '$sexo', '$civil', '$txtNatural', '$txtNacional', '$txtEnd', '$txtBairro', '$txtCEP', '$txtCidade', '$uf', '$txtTel', '$txtCel', '$txtEmail', '$txtEnsMed', '$txtInst', '$txtCurso', '$turno', '$turma',  '$login', '$senha', '$nome')";
+	     			 $res = pg_query($sql);
 		  				if(pg_affected_rows($res)){
-							"<script> alert('Aluno cadastrado com sucesso!') </script>";
+							echo "<script> alert('Aluno cadastrado com sucesso!') </script>";
 							"<script language='javascript'>window.location.href='pes_aluno.php'</script>";
 						} else {
-			  				"<script> alert('Houveram problemas na gravação das informações.') </script>";
+			  				echo "<script> alert('Houveram problemas na gravação das informações.') </script>";
 					}	 
 	  			}
 			}
@@ -173,13 +175,13 @@
     if($Pesquisar == 'Pesquisar'){
 		$txtCPF = $_POST["txtCPF"];
   		if (empty($txtCPF)){
-   			"<script> alert('- O CPF deve ser informado.') </script>";
+   			echo "<script> alert('- O CPF deve ser informado.') </script>";
 		}
 	 		if( !empty($txtCPF)) {
 				$sql = "SELECT * FROM alunos WHERE cpf='$txtCPF'";
 				$res = pg_query($conexao, $sql);
   					if (pg_num_rows($res) == 0) {
-     					"<script> alert('Aluno não cadastrado.') </script>";
+     					echo "<script> alert('Aluno não cadastrado.') </script>";
   					} else {
 						$txtCPF = pg_fetch_result($res,0,'cpf');
 						$txtRG = pg_fetch_result($res,0,'rg');
@@ -239,54 +241,54 @@
 		$nome = $_POST["nome"];
 	
 		if (empty($txtCPF)) {
-			"<script> alert('- Por favor, informe o CPF.') </script>";
+			echo "<script> alert('- Por favor, informe o CPF.') </script>";
 			} else if (empty($txtRG)) { 
-				"<script> alert('- Por favor, informe a Identidade.') </script>";
+				echo "<script> alert('- Por favor, informe a Identidade.') </script>";
 			} else if (empty($txtOrgExp)) { 
-				"<script> alert('- Por favor, informe o Orgão Expedidor.') </script>";
+				echo "<script> alert('- Por favor, informe o Orgão Expedidor.') </script>";
 			} else if (empty($txtAluno)) { 
-				"<script> alert('- Por favor, informe o ALUNO(A).') </script>";
+				echo "<script> alert('- Por favor, informe o ALUNO(A).') </script>";
 			} else if (empty($sexo)) { 
-				"<script> alert('- Por favor, informe o SEXO.') </script>";
+				echo "<script> alert('- Por favor, informe o SEXO.') </script>";
 			} else if (empty($txtNasc)) { 
-				"<script> alert('- Por favor, informe a DATA de NASCIMENTO.') </script>";
+				echo "<script> alert('- Por favor, informe a DATA de NASCIMENTO.') </script>";
 			} else if (empty($civil)) { 
-				"<script> alert('- Por favor, informe o ESTADO CIVIL.') </script>";
+				echo "<script> alert('- Por favor, informe o ESTADO CIVIL.') </script>";
 			} else if (empty($txtEnd)) { 
-				"<script> alert('- Por favor, informe o ENDEREÇO.') </script>";
+				echo "<script> alert('- Por favor, informe o ENDEREÇO.') </script>";
 			} else if (empty($txtBairro)) { 
-				"<script> alert('- Por favor, informe o BAIRRO.') </script>";
+				echo "<script> alert('- Por favor, informe o BAIRRO.') </script>";
 			} else if (empty($txtCEP) ){ 
-				"<script> alert('- Por favor, informe o CEP.') </script>";
+				echo "<script> alert('- Por favor, informe o CEP.') </script>";
 			} else if (empty($txtCidade)) { 
-				"<script> alert('- Por favor, informe a CIDADE.') </script>";
+				echo "<script> alert('- Por favor, informe a CIDADE.') </script>";
 			} else if (empty($uf)) { 
-				"<script> alert('- Por favor, informe a UF.') </script>";
+				echo "<script> alert('- Por favor, informe a UF.') </script>";
 			} else if (empty($txtTel)) { 
-				"<script> alert('- Por favor, informe o TELEFONE RESIDENCIAL.') </script>";
+				echo "<script> alert('- Por favor, informe o TELEFONE RESIDENCIAL.') </script>";
 			} else if (empty($txtEmail)) { 
-				"<script> alert('- Por favor, informe o TELEFONE RESIDENCIAL.') </script>";
+				echo "<script> alert('- Por favor, informe o TELEFONE RESIDENCIAL.') </script>";
 			} else if (empty($txtEnsMed)) { 
-				"<script> alert('- Por favor, informe o ENSINO MÉDIO.') </script>";
+				echo "<script> alert('- Por favor, informe o ENSINO MÉDIO.') </script>";
 			} else if (empty($txtInst)) { 
-				"<script> alert('- Por favor, informe a INSTITUIÇÃO.') </script>";
+				echo "<script> alert('- Por favor, informe a INSTITUIÇÃO.') </script>";
 			} else if (empty($txtCurso)) { 
-				"<script> alert('- Por favor, informe o CURSO.') </script>";
+				echo "<script> alert('- Por favor, informe o CURSO.') </script>";
 			} else if (empty($turno)) { 
-				"<script> alert('- Por favor, informe o TURNO.') </script>";
+				echo "<script> alert('- Por favor, informe o TURNO.') </script>";
 			} else if (empty($login)) { 
-				"<script> alert('- Por favor, informe o TURNO.') </script>";
+				echo "<script> alert('- Por favor, informe o TURNO.') </script>";
 			} else if (empty($senha)) { 
-				"<script> alert('- Por favor, informe o TURNO.') </script>";
+				echo "<script> alert('- Por favor, informe o TURNO.') </script>";
 			} else if (empty($nome)) { 
-				"<script> alert('- Por favor, informe o TURNO.') </script>";
+				echo "<script> alert('- Por favor, informe o TURNO.') </script>";
 			}	
 			if (!empty($txtCPF) and !empty($txtRG) and !empty($txtOrgExp) and !empty($txtAluno) and !empty($txtNasc) and !empty($sexo) and !empty($civil) and !empty($txtEnd) and !empty($txtBairro) and !empty($txtCEP) and !empty($txtCidade) and !empty($uf) and !empty($txtTel) and !empty($txtEnsMed) and !empty($txtInst) and !empty($txtEmail) and !empty($turno) and !empty($txtCurso) and !empty($login) and !empty($senha) and !empty($nome)){
 				$txtCPF = $_POST["txtCPF"];
 				$sql = "SELECT * FROM alunos WHERE cpf = '$txtCPF'";
 				$res = pg_query($sql);
 				if ( pg_num_rows($res) <= 0 ) {
-				"<script> alert('Este aluno não foi cadastrado!') </script>";
+				echo "<script> alert('Este aluno não foi cadastrado!') </script>";
 				} else {
 					$txtCPF = $_POST["txtCPF"];
 					$txtRG = $_POST["txtRG"];
@@ -312,10 +314,10 @@
 				WHERE cpf = '$txtCPF'";
 				$res = pg_query($sql);
 				if (pg_affected_rows($res)) {
-					"<script> alert('Informações alteradas com sucesso!') </script>";
+					echo "<script> alert('Informações alteradas com sucesso!') </script>";
 					"<script language='javascript'>window.location.href='pes_aluno.php'</script>";
 				} else {
-					"<script> alert('Houveram problemas na alteração das informações') </script>";
+					echo "<script> alert('Houveram problemas na alteração das informações') </script>";
 				}
 			}
 		}
@@ -326,22 +328,22 @@
 					if ($Excluir == 'Excluir') {
 						$txtCPF = $_POST["txtCPF"];
 					if (empty($txtCPF)){
-						"<script> alert('- O CPF deve ser informado.') </script>";
+						echo "<script> alert('- O CPF deve ser informado.') </script>";
 					}
 					if( !empty($txtCPF)) {
 						$txtCPF = $_POST['txtCPF'];
 						$sql = "SELECT * FROM alunos WHERE cpf = '$txtCPF'";
 						$res = pg_query($sql);
 						if ( pg_num_rows($res) <= 0 ) {
-							"<script> alert('Este aluno não foi cadastrado!') </script>";
+							echo "<script> alert('Este aluno não foi cadastrado!') </script>";
 						} else {
 							$sql = "DELETE from alunos where cpf = '$txtCPF'";
 							$res = pg_query($sql);
 							if (pg_affected_rows($res)) {
-								"<script> alert('Aluno excluído com sucesso!') </script>";
+								echo "<script> alert('Aluno excluído com sucesso!') </script>";
 								"<script language='javascript'>window.location.href='pes_aluno.php'</script>";
 								} else {
-									"<script> alert('Houveram problemas na exclusão das informações') </script>";
+									echo "<script> alert('Houveram problemas na exclusão das informações') </script>";
 				}
 			}
 		}
@@ -419,17 +421,18 @@
        <td align="right">UF:</td>
        <td align="left"><select name="uf">
 					<?php
-					include 'conexao/conexao.php';
+					//include 'conexao/conexao.php';
 					$sql_est = "SELECT * FROM estados ORDER BY estado;";	
 					$res = pg_query($sql_est);
-				     for($i=0; $i<pg_num_rows($res); $i++){
+				     for($i=0; $i < pg_num_rows($res); $i++){
+					  var_dump($res);	 
 					  $uf  = pg_fetch_result($res, $i,'uf');
 					  $est = pg_fetch_result($res, $i,'estado');
 					  $xuf = pg_fetch_result($res, $i,'uf');
 						  if($uf == $xuf){
-						    "<option value=\"$xuf\" selected>$uf</option>>";
+						    echo "<option value=\"$xuf\" selected>$uf</option>>";
   								}else{
-								    "<option value=\"$xuf\"> $uf </option>>";
+								   echo "<option value=\"$xuf\"> $uf </option>>";
   									}
 								}			
 					?>
@@ -487,7 +490,7 @@
 	  <table border="0" align="left" cellspading="2" cellspacing="2">
 	  <tr>
 	  <td colspan="3" align="left">Selecione os dados para efetuar a matrícula&nbsp;
-       <a href="#" onClick="window.open('../SGDR/popups/popupturma.php', 'popupturma', 'STATUS=NO, TOOLBAR=NO,        LOCATION=NO, DIRECTORIES=NO, RESISABLE=NO, SCROLLBARS=YES, TOP=50, LEFT=100, WIDTH=400, HEIGHT=400');">
+       <a href="#" onClick="window.open('../projeto-sgdr/popups/popupturma.php', 'popupturma', 'STATUS=NO, TOOLBAR=NO,        LOCATION=NO, DIRECTORIES=NO, RESISABLE=NO, SCROLLBARS=YES, TOP=50, LEFT=100, WIDTH=400, HEIGHT=400');">
 		<img src="imagens/icone_buscar.gif" alt="Procurar dados da Matrícula" border="0"></a>&nbsp;<br></td>
        </tr>
        <tr>

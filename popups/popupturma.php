@@ -23,7 +23,7 @@ function retornarPesquisa(turma, txtCurso, turno) {
 	 <table border="0" align="center">
       <tr>
        <td align="right">Turma:</td>
-       <td align="left"><input type="text" name="turma" value="<?php echo $turma; ?>" size="30" maxlength="60"></td>
+       <td align="left"><input type="text" name="turma" value="<?php  $turma; ?>" size="30" maxlength="60"></td>
        <td align="right"><input type="submit" value="Filtrar" class="botao" name="Filtrar"></td>
         </tr>
      </table>
@@ -32,20 +32,20 @@ function retornarPesquisa(turma, txtCurso, turno) {
 
 	 <br>
 	 <?php
-	  //Conexão com o banco de dados
+	  //ConexÃ£o com o banco de dados
 	  include '../conexao/conexao.php';
 	
 	
-	$turma = $_POST["turma"];
-	$txtCurso = $_POST["txtCurso"];
-	$turno = $_POST["turno"];
+	$turma = isset($_POST["turma"]);
+	$txtCurso = isset($_POST["txtCurso"]);
+	$turno = isset($_POST["turno"]);
 		
-	  $sql = "select * from turmas where turma ilike '%$turma%' order by turma";
+	  $sql = "SELECT * from turmas where turma like '%$turma%' order by turma";
 	  $res = pg_query($conexao, $sql);  
 		if (pg_num_rows($res) == 0){
-		  echo "<span class='mensagem'>Não há registro!</span>";
+		  echo "<span class='mensagem'>NÃ£o hÃ¡ registro!</span>";
 		   }else{
-	  //Construção da consulta
+	  //ConstruÃ§Ã£o da consulta
        	echo "<table width='300' border='0' class='corpo_tabela' cellspadding='1' cellspacing='1' align='center'>";
 		echo "<tr>";
 		echo "<td class='topo_tabela' width='200' align='center'>CURSOS</td>"; 
@@ -54,7 +54,7 @@ function retornarPesquisa(turma, txtCurso, turno) {
 		echo "<td class='topo_tabela' width='200' align='center'>VAGAS</td>"; 
         echo "<td class='topo_tabela' width='100' align='center'>&nbsp;</td>";
 		echo "</tr>";
-		 //Construção de um loop
+		 //Construï¿½ï¿½o de um loop
 		 for ($i=0; $i < pg_num_rows($res); $i++ ) {
 	     echo "<tr>";
   		  $txtCurso = pg_fetch_result($res, $i, "curso");

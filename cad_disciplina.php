@@ -1,70 +1,86 @@
 <?php
-include 'config/valida.php';
-include 'conexao/conexao.php';
+    include 'conexao/conexao.php';
+    include 'config/valida.php';
 ?>
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
-<title>::EETEP - Secretaria Virtual::</title>
-
-<link rel="stylesheet" href="css/format.css" type="text/css" />
-<link rel="stylesheet" href="css/link.css" type="text/css" />
-<script type="text/javascript" src="scripts/menu.js"></script>
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::EETEP - Secretaria Virtual::</title>
+    <!--Estilo CSS -->
+    <link rel="stylesheet" href="css/format.css" type="text/css" />
+    <link rel="stylesheet" href="css/link.css" type="text/css" />
+    <!-- Arquivo JavaScript -->
+    <script type="text/javascript" src="scripts/menu.js"></script>
+	<script type="text/javascript" src="scripts/scriptFormAluno.js"></script>
 </head>
 
-<body onLoad="horizontal();" vlink="white" alink="white">
- <div id="geral">
- <div id="topo">
- </div>
-<div id="nav">
-<ul id="menu_dropdown" class="menubar">
-        <li class="submenu"><a href="administracao.php"><img src="imagens/icone_home.gif" alt="P·gina Inicial">Home</a></li>
-		<li class="submenu"><a href="#"><img src="imagens/icone_cli.gif" alt="Efetuar cadastros">Cadastro</a></li>
-        <ul class="menu">
-	    <li><a href="cad_aluno.php">Alunos</a></li>
-        <li><a href="cad_func.php">Professores</a></li>
-        <li><a href="cad_usuario.php">Usu·rios</a></li>
-	   </ul>
-   <li class="submenu"><a href="#"><img src="imagens/icone_ger.gif" alt="Gerenciamento">Gerenciamento</a>
-      <ul class="menu">
-	    <li><a href="cad_curso.php">Cursos</a></li>
-		<li><a href="cad_disciplina.php">Disciplinas</a></li>
-        <li><a href="ger_material.php">Material Did·ticos</a></li>
-        <li><a href="ger_turma.php">Turmas</a></li>
-      </ul>
-   </li>
-   <li class="submenu"><a href="downloads/"><img src="imagens/icone_pasta.gif" alt="Visualizar Material">Pasta</a></li>		
-   <li class="submenu"><a href="#"><img src="imagens/icone_rel.gif" alt="Visualizar RelatÛrios">RelatÛrio</a>
-      <ul class="menu">
-        <li><a href="relatorios/rel_aluno.php">Alunos</a></li>
-        <li><a href="relatorios/rel_func.php">Professores</a></li>
-        <li><a href="relatorios/rel_curso.php">Cursos</a></li>
-		<li><a href="relatorios/rel_disciplina.php">Disciplinas</a></li>
-		<li><a href="relatorios/rel_material.php">Material Did·ticos</a></li>
-        <li><a href="relatorios/rel_turma.php">Turmas</a></li>
-		<li><a href="relatorios/rel_usuario.php">Usu·rios</a></li>
-      </ul>
-   </li>
-    </li>
-   <li class="submenu"><a href="#"><img src="imagens/icone_ajuda.gif" alt="Ajuda">Ajuda</a></li>
-     <ul class="menu">
-         <li><a href="manual.pdf">Manual do Usu·rio</a></li>
-        </ul>
-   <li class="submenu"><a href="logout.php" onClick="return confirm('VocÍ deseja realmente sair?')"><img src="imagens/icone_sair.gif" alt="Logout">Sair</a></li>
-</ul>
- </div>
-
+<body onLoad="horizontal();" vlink="white" alink="white"> 
+ <div id="geral"> 
+    <div id="topo">
+          <!--IMG Topo - Arquivo CSS -->  
+    </div>
+    <div id="nav">
+        <ul id="menu_dropdown" class="menubar">
+            <li class="submenu">
+                <a href="administracao.php"><img src="imagens/icone_home.gif" alt="P√°gina Inicial">Home</a>
+            </li>
+            <li class="submenu">
+                <a href="#"><img src="imagens/icone_cli.gif" alt="Efetuar cadastros">Cadastro</a>
+                <ul class="menu">
+                    <li><a href="cad_aluno.php">Alunos</a></li>
+                    <li><a href="cad_func.php">Professores</a></li>
+                    <li><a href="cad_usuario.php">Usu√°rios</a></li>
+                </ul>    
+            </li> <!--/ li submenu-->
+            <li class="submenu">
+                <a href="#"><img src="imagens/icone_ger.gif" alt="Gerenciamento">Gerenciamento</a>
+                <ul class="menu">
+                    <li><a href="cad_curso.php">Cursos</a></li>
+                    <li><a href="cad_disciplina.php">Disciplinas</a></li>
+                    <li><a href="ger_material.php">Material Did√°ticos</a></li>
+                    <li><a href="ger_turma.php">Turmas</a></li>
+                </ul>
+            </li><!--/ li submenu-->
+            <li class="submenu">
+                <a href="#"><img src="imagens/icone_rel.gif" alt="Visualizar Relat√≥rios">Relat√≥rio</a>
+                <ul class="menu">
+                    <li><a href="relatorios/rel_aluno.php">Alunos</a></li>
+                    <li><a href="relatorios/rel_func.php">Professores</a></li>
+                    <li><a href="relatorios/rel_curso.php">Cursos</a></li>
+                    <li><a href="relatorios/rel_disciplina.php">Disciplinas</a></li>
+                    <li><a href="relatorios/rel_material.php">Material Did√°ticos</a></li>
+                    <li><a href="relatorios/rel_turma.php">Turmas</a></li>
+                    <li><a href="relatorios/rel_usuario.php">Usu√°rios</a></li>
+                </ul>
+            </li><!--/ li submenu-->
+           <li class="submenu">
+               <a href="downloads/"><img src="imagens/icone_pasta.gif" alt="Visualizar Material">Pasta</a>
+            </li><!--/ li submenu-->		
+            <!--<li class="submenu">
+                <a href="#"><img src="imagens/icone_ajuda.gif" alt="Ajuda">Ajuda</a>
+                <ul class="menu">
+                    <li><a href="manual.pdf">Manual do Usu√°rio</a></li>
+                </ul>
+            </li>--><!--/ li submenu-->		    
+            <li class="submenu">
+                <a href="logout.php" onClick="return confirm('Voc√™ deseja realmente sair?')"><img src="imagens/icone_sair.gif" alt="Logout">Sair</a>
+            </li>
+        </ul><!--/ul class menubar -->
+    </div>
  <div id="conteudo">
    <img src="imagens/icone_disciplina.gif">
    <hr size="1">
     <br>
     <div align="center">
      <?php
-	//Conex„o ao Banco de Dados
+	//Conex√£o ao Banco de Dados
 	include 'conexao/conexao.php';
 
-	//OperaÁ„o de Inclus„o
-	$Incluir = $_POST["Incluir"];
+	//Opera√ß√£o de Inclus√£o
+	$Incluir = isset($_POST["Incluir"]);
 	 if ($Incluir == 'Incluir'){
 	
 	$txtDis = $_POST["txtDis"];
@@ -75,7 +91,7 @@ include 'conexao/conexao.php';
 	echo "<script> alert('- Por favor, informe a DISCIPLINA.') </script>";
 	}
 	else if (empty($ch)){ 
-	echo "<script> alert('- Por favor, informe a CARGA HOR¡RIA.') </script>";
+	echo "<script> alert('- Por favor, informe a CARGA HOR√ÅRIA.') </script>";
 	}
 	else if ($txtCurso == ""){ 
 	echo "<script> alert('- Por favor, informe a CURSO.') </script>";
@@ -84,7 +100,7 @@ include 'conexao/conexao.php';
 	$sql = "SELECT * from disciplinas where disciplina = '$txtDis'";
 	$res = pg_query($sql); 
 	 if (pg_num_rows($res)){
-	  echo "<script> alert('Disciplina j· cadastrada.') </script>";
+	  echo "<script> alert('Disciplina j√° cadastrada.') </script>";
 	   }else{
 	       $sql = "INSERT into disciplinas (disciplina, carga_horaria, curso) values ('$txtDis', '$ch', '$txtCurso')";
 	     $res = pg_query($sql);
@@ -92,14 +108,14 @@ include 'conexao/conexao.php';
 		   echo "<script> alert('Disciplina cadastrada com sucesso!') </script>";
 		   echo "<script language='javascript'>window.location.href='pes_disciplina.php'</script>";
 			}else{
-			  echo "<script> alert('Houveram problemas na gravaÁ„o das informaÁıes.') </script>";
+			  echo "<script> alert('Houveram problemas na grava√ß√£o das informa√ß√µes.') </script>";
 		}	 
 	  }
 	}
    }
    
-   //OperaÁ„o de Pesquisa
-   $Pesquisar = $_POST["Pesquisar"];	
+   //Opera√ß√£o de Pesquisa
+   $Pesquisar = isset($_POST["Pesquisar"]);	
     if($Pesquisar == 'Pesquisar'){
 		$txtDis = $_POST["txtDis"];
   if (empty($txtDis)){
@@ -109,7 +125,7 @@ include 'conexao/conexao.php';
   $sql = "SELECT * from disciplinas where disciplina='$txtDis'";
   $res = pg_query($conexao, $sql);
   if (pg_num_rows($res) == 0) {
-     echo "<script> alert('Disciplina n„o cadastrada.') </script>";
+     echo "<script> alert('Disciplina n√£o cadastrada.') </script>";
   }else {
     $txtDis = pg_fetch_result($res,0,'disciplina');
     $ch  = pg_fetch_result($res,0,'carga_horaria');
@@ -118,8 +134,8 @@ include 'conexao/conexao.php';
   }
 }
 
-  //OperaÁ„o de AlteraÁ„o
-  $Alterar = $_POST['Alterar'];
+  //Opera√ß√£o de Altera√ß√£o
+  $Alterar = isset($_POST['Alterar']);
 if ($Alterar == 'Alterar') {
 $txtDis = $_POST["txtDis"];
 $ch = $_POST["ch"];
@@ -128,7 +144,7 @@ $txtCurso = $_POST["txtCurso"];
    	echo "<script> alert('- A DISCIPLINA deve ser informada.') </script>";
 	}
 	else if (empty($ch)){
-   	echo "<script> alert('- A CARGA HOR¡RIA deve ser informada.') </script>";
+   	echo "<script> alert('- A CARGA HOR√ÅRIA deve ser informada.') </script>";
 	}
 	else if (empty($txtCurso)){
    	echo "<script> alert('- O CURSO deve ser informado.') </script>";
@@ -138,23 +154,23 @@ $txtDis = $_POST["txtDis"];
 $sql = "SELECT * from disciplinas where disciplina = '$txtDis'";
 $res = pg_query($sql);
 if ( pg_num_rows($res) <= 0 ) {
-echo "<script> alert('Esta disciplina n„o foi cadastrada!') </script>";
+echo "<script> alert('Esta disciplina n√£o foi cadastrada!') </script>";
 } else {
 $txtDis = $_POST['txtDis'];
 $ch = $_POST['ch'];
 $sql = "UPDATE disciplinas set carga_horaria='$ch', curso='$txtCurso' where disciplina = '$txtDis'";
 $res = pg_query($sql);
 if (pg_affected_rows($res)) {
-echo "<script> alert('InformaÁıes alteradas com sucesso!') </script>";
+echo "<script> alert('Informa√ß√µes alteradas com sucesso!') </script>";
 echo "<script language='javascript'>window.location.href='pes_disciplina.php'</script>";
 } else {
-echo "<script> alert('Houveram problemas na alteraÁ„o das informaÁıes') </script>";
+echo "<script> alert('Houveram problemas na altera√ß√£o das informa√ß√µes') </script>";
 				}
 			}
 		}
 	}
-// OperaÁ„o de Exclus„o
-$Excluir = $_POST['Excluir'];
+// Opera√ß√£o de Exclus√£o
+$Excluir = isset($_POST['Excluir']);
 if ($Excluir == 'Excluir') {
 $txtDis = $_POST['txtDis'];
   if (empty($txtDis)){
@@ -165,22 +181,22 @@ $txtDis = $_POST['txtDis'];
 $sql = "SELECT * from disciplinas where disciplina = '$txtDis'";
 $res = pg_query($sql);
 if ( pg_num_rows($res) <= 0 ) {
-echo "<script> alert('Esta disciplina n„o foi cadastrada!') </script>";
+echo "<script> alert('Esta disciplina n√£o foi cadastrada!') </script>";
 } else {
 $sql = "DELETE from disciplinas where disciplina = '$txtDis'";
 $res = pg_query($sql);
 if (pg_affected_rows($res)) {
-echo "<script> alert('Disciplina excluÌda com sucesso!') </script>";
+echo "<script> alert('Disciplina exclu√≠da com sucesso!') </script>";
 echo "<script language='javascript'>window.location.href='pes_disciplina.php'</script>";
 } else {
-echo "<script> alert('Houveram problemas na exclus„o das informaÁıes') </script>";
+echo "<script> alert('Houveram problemas na exclus√£o das informa√ß√µes') </script>";
 }
 }
 }
 }
 
 ?>
-     <div align="right"><span class="aviso">(*) Campos ObrigatÛrios</span></div>
+     <div align="right"><span class="aviso">(*) Campos Obrigat√≥rios</span></div>
 	 <fieldset class="box">
       <legend class="titulo">Gerenciamento de Disciplina</legend>
        <p>
@@ -188,20 +204,20 @@ echo "<script> alert('Houveram problemas na exclus„o das informaÁıes') </script>
       <table border="0" align="left" cellspading="2" cellspacing="2">
       <tr>
        <td align="right">Disciplina:</td>
-       <td align="left"><input type="text" name="txtDis" value="<?php echo $txtDis; ?>" maxlenght="40" size="50">
+       <td align="left"><input type="text" name="txtDis" value="<?php  $txtDis; ?>" maxlenght="40" size="50">
 	   					<span class="aviso">*</span>&nbsp;
 	   					<input type="submit" name="Pesquisar" value="Pesquisar" class="botao">
 	   
 	   </td>
       </tr>
       <tr>
-       <td align="right">Carga Hor·ria:</td>
+       <td align="right">Carga Hor√°ria:</td>
        <td align="left"><input type="radio" name="ch" value="40 Hs/a">40 Hs/a&nbsp;<input type="radio" name="ch" value="80 Hs/a">80 Hs/a											       <span class="aviso">*</span>&nbsp;  
 	   </td>
 	   <tr>
        <td align="right">Curso:</td>
-       <td align="left"><input type="type" name="txtCurso" value="<?php echo $txtCurso;?>" maxlength="40" size="30">&nbsp;
-	   <a href="#" onClick="window.open('../SGDR/popups/popupcurso.php', 'popupcurso', 'STATUS=NO, TOOLBAR=NO, LOCATION=NO, DIRECTORIES=NO, RESISABLE=NO, SCROLLBARS=YES, TOP=50, LEFT=100, WIDTH=400, HEIGHT=400');">
+       <td align="left"><input type="type" name="txtCurso" value="<?php  $txtCurso;?>" maxlength="40" size="30">&nbsp;
+	   <a href="#" onClick="window.open('../projeto-sgdr/popups/popupcurso.php', 'popupcurso', 'STATUS=NO, TOOLBAR=NO, LOCATION=NO, DIRECTORIES=NO, RESISABLE=NO, SCROLLBARS=YES, TOP=50, LEFT=100, WIDTH=400, HEIGHT=400');">
 		<img src="imagens/icone_buscar.gif" alt="Procurar Cursos" border="0"></a>&nbsp;
 	   <span class="aviso">*</span>                 
 	   </td>
@@ -222,7 +238,7 @@ echo "<script> alert('Houveram problemas na exclus„o das informaÁıes') </script>
 <hr size="1">
 </div>
 <div id="rodape">
- Copyright© SGDR - Sistema de Gerenciamento Did·tico Remoto. Todos os direitos reservados.
+ Copyright&copy; SGDR - Sistema de Gerenciamento Did√°tico Remoto. Todos os direitos reservados.
  </div>
  </div>
 </div>

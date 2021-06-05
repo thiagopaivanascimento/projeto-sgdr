@@ -18,16 +18,16 @@ include 'config/valida_aluno.php';
  </div>
 <div id="nav">
 <ul id="menu_dropdown" class="menubar">
-        <li class="submenu"><a href="adm_aluno.php"><img src="imagens/icone_home.gif" alt="Página Inicial">Home</a></li>
-		<li class="submenu"><a href="#"><img src="imagens/icone_cli.gif" alt="Retificação de dados cadastrais">Retificação</a></li>
-        <li class="submenu"><a href="#"><img src="imagens/icone_down.gif" alt="Downloads do Material Didático">Downloads</a></li>
+        <li class="submenu"><a href="adm_aluno.php"><img src="imagens/icone_home.gif" alt="PÃ¡gina Inicial">Home</a></li>
+		<li class="submenu"><a href="#"><img src="imagens/icone_cli.gif" alt="RetificaÃ§Ã£o de dados cadastrais">RetificaÃ§Ã£o</a></li>
+        <li class="submenu"><a href="#"><img src="imagens/icone_down.gif" alt="Downloads do Material DidÃ¡tico">Downloads</a></li>
         <li class="submenu"><a href="#"><img src="imagens/icone_rel.gif" alt="Visualizar Matriz Curricular">Matriz</a></li>
     </li>
    <li class="submenu"><a href="#"><img src="imagens/icone_ajuda.gif" alt="Manual">Ajuda</a></li>
      <ul class="menu">
          <li><a href="manual.pdf">Manual do Aluno</a></li>
         </ul>
-   <li class="submenu"><a href="login_aluno.php" onClick="return confirm('Você deseja realmente sair?')"><img src="imagens/icone_sair.gif" alt="Logout">Sair</a></li>
+   <li class="submenu"><a href="login_aluno.php" onClick="return confirm('VocÃª deseja realmente sair?')"><img src="imagens/icone_sair.gif" alt="Logout">Sair</a></li>
 </ul>
  </div>
  <div id="conteudo">
@@ -43,21 +43,21 @@ include 'config/valida_aluno.php';
 	<tr>
     <td  colspan="3" bgcolor="#CCCCCC" align="center" height="50" width="675">
 	<span class="saudacao">
-	Você está conectado ao Bano de Dados da<br>
-	EETEP - Escola de Educação Teológia Pentecostal
+	VocÃª estÃ¡ conectado ao Bano de Dados da<br>
+	EETEP - Escola de EducaÃ§Ã£o Teologia Pentecostal
 	</span>
 	</td>
 	</tr> 
 	<tr>
-    <td align="left" height="400" width="225"><img src="imagens/anun_aluno_down.jpg"></td>
-	<td align="left" height="400" width="225"><img src="imagens/anun_aluno_matriz.jpg"></td>
-    <td align="left" height="400" width="225"><img src="imagens/anun_aluno_manual.jpg"></td>
+    <td align="left" width="225"><img src="imagens/anun_aluno_down.jpg"></td>
+	<td align="left" width="225"><img src="imagens/anun_aluno_matriz.jpg"></td>
+    <td align="left" width="225"><img src="imagens/anun_aluno_manual.jpg"></td>
 	</tr> 
   </table>
  </div>
 <br>
  <div id="rodape">
-  Copyright© SGDR - Sistema de Gerenciamento Didático Remoto. Todos os direitos reservados.
+    Copyright&copy; SGDR - Sistema de Gerenciamento DidÃ¡tico Remoto. Todos os direitos reservados.
    </div>
  </div>
 </div>

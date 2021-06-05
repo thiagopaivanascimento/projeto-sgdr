@@ -21,11 +21,11 @@ if(!(empty($loginbusca) and empty($senhabusca) and empty($nomebusca))){
   $res = pg_query($sql);
    if(pg_num_rows($res) == 1)
     {
-	 if($senha_usuario != pg_fetch_result($res, 0, "senha"))
+	 if($senhabusca != pg_fetch_result($res, 0, "senha"))
 	  {
 	   unset ($_SESSION['login_usuario']);
 	   unset ($_SESSION['senha_usuario']);
-	   echo "<script> alert('Você não efetuou o LOGIN') </script>";
+	   echo "<script> alert('VocÃª nÃ£o efetuou o LOGIN') </script>";
 	   echo "<script language='javascript'>window.location.href = 'login_aluno.php'</script>";
 	   exit;
 	  } 
@@ -34,14 +34,14 @@ if(!(empty($loginbusca) and empty($senhabusca) and empty($nomebusca))){
 	{ 
 	   unset ($_SESSION['login_usuario']);
 	   unset ($_SESSION['senha_usuario']);
-	   echo "<script> alert('Você não efetuou o LOGIN') </script>";
+	   echo "<script> alert('Vocï¿½ nï¿½o efetuou o LOGIN') </script>";
 	   echo "<script language='javascript'>window.location.href = 'login_aluno.php'</script>";
 	   exit;
 	 }
 	}
 	else
 	 {
-	 echo "<script> alert('Você não efetuou o LOGIN') </script>";
+	 echo "<script> alert('Vocï¿½ nï¿½o efetuou o LOGIN') </script>";
 	 echo "<script language='javascript'>window.location.href = 'login_aluno.php'</script>";
 	 exit;
 	}

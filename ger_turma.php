@@ -1,57 +1,75 @@
 <?php
-include 'conexao/conexao.php';
+    include 'conexao/conexao.php';
+    include 'config/valida.php';
 ?>
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
-<title>::EETEP - Secretaria Virtual::</title>
-
-<link rel="stylesheet" href="css/format.css" type="text/css" />
-<link rel="stylesheet" href="css/link.css" type="text/css" />
-<script type="text/javascript" src="scripts/menu.js"></script>
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::EETEP - Secretaria Virtual::</title>
+    <!--Estilo CSS -->
+    <link rel="stylesheet" href="css/format.css" type="text/css" />
+    <link rel="stylesheet" href="css/link.css" type="text/css" />
+    <!-- Arquivo JavaScript -->
+    <script type="text/javascript" src="scripts/menu.js"></script>
+	<script type="text/javascript" src="scripts/scriptFormAluno.js"></script>
 </head>
-<body onLoad="horizontal();" vlink="white" alink="white">
- <div id="geral">
- <div id="topo">
- </div>
- 
-<div id="nav">
-<ul id="menu_dropdown" class="menubar">
-        <li class="submenu"><a href="administracao.php"><img src="imagens/icone_home.gif" alt="Página Inicial">Home</a></li>
-		<li class="submenu"><a href="#"><img src="imagens/icone_cli.gif" alt="Efetuar cadastros">Cadastro</a></li>
-        <ul class="menu">
-	    <li><a href="cad_aluno.php">Alunos</a></li>
-        <li><a href="cad_func.php">Professores</a></li>
-        <li><a href="cad_usuario.php">Usuários</a></li>
-	   </ul>
-   <li class="submenu"><a href="#"><img src="imagens/icone_ger.gif" alt="Gerenciamento">Gerenciamento</a>
-      <ul class="menu">
-	    <li><a href="cad_curso.php">Cursos</a></li>
-		<li><a href="cad_disciplina.php">Disciplinas</a></li>
-        <li><a href="ger_material.php">Material Didáticos</a></li>
-        <li><a href="ger_turma.php">Turmas</a></li>
-      </ul>
-   </li>
-   <li class="submenu"><a href="downloads/"><img src="imagens/icone_pasta.gif" alt="Visualizar Material">Pasta</a></li>		
-   <li class="submenu"><a href="#"><img src="imagens/icone_rel.gif" alt="Visualizar Relatórios">Relatório</a>
-      <ul class="menu">
-        <li><a href="relatorios/rel_aluno.php">Alunos</a></li>
-        <li><a href="relatorios/rel_func.php">Professores</a></li>
-        <li><a href="relatorios/rel_curso.php">Cursos</a></li>
-		<li><a href="relatorios/rel_disciplina.php">Disciplinas</a></li>
-		<li><a href="relatorios/rel_material.php">Material Didáticos</a></li>
-        <li><a href="relatorios/rel_turma.php">Turmas</a></li>
-		<li><a href="relatorios/rel_usuario.php">Usuários</a></li>
-      </ul>
-   </li>
-    </li>
-   <li class="submenu"><a href="#"><img src="imagens/icone_ajuda.gif" alt="Ajuda">Ajuda</a></li>
-     <ul class="menu">
-         <li><a href="manual.pdf">Manual do Usuário</a></li>
-        </ul>
-   <li class="submenu"><a href="logout.php" onClick="return confirm('Você deseja realmente sair?')"><img src="imagens/icone_sair.gif" alt="Logout">Sair</a></li>
-</ul>
- </div>
+
+<body onLoad="horizontal();" vlink="white" alink="white"> 
+ <div id="geral"> 
+    <div id="topo">
+          <!--IMG Topo - Arquivo CSS -->  
+    </div>
+    <div id="nav">
+        <ul id="menu_dropdown" class="menubar">
+            <li class="submenu">
+                <a href="administracao.php"><img src="imagens/icone_home.gif" alt="PÃ¡gina Inicial">Home</a>
+            </li>
+            <li class="submenu">
+                <a href="#"><img src="imagens/icone_cli.gif" alt="Efetuar cadastros">Cadastro</a>
+                <ul class="menu">
+                    <li><a href="cad_aluno.php">Alunos</a></li>
+                    <li><a href="cad_func.php">Professores</a></li>
+                    <li><a href="cad_usuario.php">UsuÃ¡rios</a></li>
+                </ul>    
+            </li> <!--/ li submenu-->
+            <li class="submenu">
+                <a href="#"><img src="imagens/icone_ger.gif" alt="Gerenciamento">Gerenciamento</a>
+                <ul class="menu">
+                    <li><a href="cad_curso.php">Cursos</a></li>
+                    <li><a href="cad_disciplina.php">Disciplinas</a></li>
+                    <li><a href="ger_material.php">Material DidÃ¡ticos</a></li>
+                    <li><a href="ger_turma.php">Turmas</a></li>
+                </ul>
+            </li><!--/ li submenu-->
+            <li class="submenu">
+                <a href="#"><img src="imagens/icone_rel.gif" alt="Visualizar RelatÃ³rios">RelatÃ³rio</a>
+                <ul class="menu">
+                    <li><a href="relatorios/rel_aluno.php">Alunos</a></li>
+                    <li><a href="relatorios/rel_func.php">Professores</a></li>
+                    <li><a href="relatorios/rel_curso.php">Cursos</a></li>
+                    <li><a href="relatorios/rel_disciplina.php">Disciplinas</a></li>
+                    <li><a href="relatorios/rel_material.php">Material DidÃ¡ticos</a></li>
+                    <li><a href="relatorios/rel_turma.php">Turmas</a></li>
+                    <li><a href="relatorios/rel_usuario.php">UsuÃ¡rios</a></li>
+                </ul>
+            </li><!--/ li submenu-->
+           <li class="submenu">
+               <a href="downloads/"><img src="imagens/icone_pasta.gif" alt="Visualizar Material">Pasta</a>
+            </li><!--/ li submenu-->		
+            <!--<li class="submenu">
+                <a href="#"><img src="imagens/icone_ajuda.gif" alt="Ajuda">Ajuda</a>
+                <ul class="menu">
+                    <li><a href="manual.pdf">Manual do UsuÃ¡rio</a></li>
+                </ul>
+            </li>--><!--/ li submenu-->		    
+            <li class="submenu">
+                <a href="logout.php" onClick="return confirm('VocÃª deseja realmente sair?')"><img src="imagens/icone_sair.gif" alt="Logout">Sair</a>
+            </li>
+        </ul><!--/ul class menubar -->
+    </div>
  <div id="conteudo">
    <img src="imagens/icone_turma.gif">
    <hr size="1">
@@ -60,8 +78,8 @@ include 'conexao/conexao.php';
 	<?php
 	  include 'conexao/conexao.php';
 	  
-	  //Operação de Inclusão
-	$Incluir = $_POST["Incluir"];
+	  //OperaÃ§Ã£o de InclusÃ£o
+	$Incluir = isset($_POST["Incluir"]);
 	 if ($Incluir == 'Incluir'){
 	
 	$txtTurma = $_POST["txtTurma"];
@@ -89,11 +107,11 @@ include 'conexao/conexao.php';
 	$sql = "SELECT * from turmas where turma = '$txtTurma'";
 	$res = pg_query($sql); 
 	 if (pg_num_rows($res)){
-	  echo "<script> alert('Turma já cadastrada.') </script>";
+	  echo "<script> alert('Turma jÃ¡ cadastrada.') </script>";
 	   }else{
 	   if ($vaga > 30){
-		echo "<script> alert('Execedeu o número de vagas') </script>";
-		echo "<script> alert('Permitido até 30 vagas') </script>";
+		echo "<script> alert('Execedeu o nÃºmero de vagas') </script>";
+		echo "<script> alert('Permitido atÃ© 30 vagas') </script>";
 		}else{
 	     $sql = "INSERT into turmas (turma, curso, turno, sala, vaga) values ('$txtTurma', '$txtCurso', '$turno', '$sala', '$vaga')";
 	     $res = pg_query($sql);
@@ -101,14 +119,14 @@ include 'conexao/conexao.php';
 		   echo "<script> alert('Turma cadastrada com sucesso!') </script>";
 		   echo "<script language='javascript'>window.location.href='pes_turma.php'</script>";
 			}else{
-			  echo "<script> alert('Houveram problemas na gravação das informações.') </script>";
+			  echo "<script> alert('Houveram problemas na gravaÃ§Ã£o das informaÃ§Ãµes.') </script>";
 		}	 
 	  }
 	}
    }
   } 
-   //Operação de Pesquisa
-   $Pesquisar = $_POST["Pesquisar"];	
+   //OperaÃ§Ã£o de Pesquisa
+   $Pesquisar = isset($_POST["Pesquisar"]);	
     if($Pesquisar == 'Pesquisar'){
 		$txtTurma = $_POST["txtTurma"];
   if (empty($txtTurma)){
@@ -118,7 +136,7 @@ include 'conexao/conexao.php';
   $sql = "SELECT * from turmas where turma='$txtTurma'";
   $res = pg_query($conexao, $sql);
   if (pg_num_rows($res) == 0) {
-     echo "<script> alert('Turma não cadastrada.') </script>";
+     echo "<script> alert('Turma nÃ£o cadastrada.') </script>";
   }else {
     $txtTurma = pg_fetch_result($res,0,'turma');
     $txtCurso  = pg_fetch_result($res,0,'curso');
@@ -129,8 +147,8 @@ include 'conexao/conexao.php';
   }
  }
 }
-  //Operação de Alteração
-  $Alterar = $_POST['Alterar'];
+  //OperaÃ§Ã£o de AlteraÃ§Ã£o
+  $Alterar = isset($_POST['Alterar']);
 if ($Alterar == 'Alterar') {
     $txtTurma = $_POST["txtTurma"];
 	$txtCurso = $_POST["txtCurso"];
@@ -158,7 +176,7 @@ if ($Alterar == 'Alterar') {
 $sql = "SELECT * from turmas where turma = '$txtTurma'";
 $res = pg_query($sql);
 if ( pg_num_rows($res) <= 0 ) {
-echo "<script> alert('Esta turma não foi cadastrada!') </script>";
+echo "<script> alert('Esta turma nÃ£o foi cadastrada!') </script>";
 } else {
     $txtTurma = $_POST["txtTurma"];
 	$txtCurso = $_POST["txtCurso"];
@@ -166,24 +184,24 @@ echo "<script> alert('Esta turma não foi cadastrada!') </script>";
 	$sala = $_POST["sala"];
 	$vaga = $_POST["vaga"];
 	if ($vaga > 30){
-	echo "<script> alert('Execedeu o número de vagas') </script>";
-	echo "<script> alert('Permitido até 30 vagas') </script>";
+	echo "<script> alert('Execedeu o nÃºmero de vagas') </script>";
+	echo "<script> alert('Permitido atÃ© 30 vagas') </script>";
 	}	
 	else{
 $sql = "UPDATE turmas set curso='$txtCurso', turno='$turno', sala='$sala', vaga='$vaga' where turma = '$txtTurma'";
 $res = pg_query($sql);
 if (pg_affected_rows($res)) {
-echo "<script> alert('Informações alteradas com sucesso!') </script>";
+echo "<script> alert('Informaï¿½ï¿½es alteradas com sucesso!') </script>";
 echo "<script language='javascript'>window.location.href='pes_turma.php'</script>";
 } else {
-echo "<script> alert('Houveram problemas na alteração das informações') </script>";
+echo "<script> alert('Houveram problemas na alteraÃ§Ã£o das informaÃ§Ãµes') </script>";
 }
 				}
 			}
 		}
 	}
-// Operação de Exclusão
-$Excluir = $_POST['Excluir'];
+// OperaÃ§Ã£o de ExclusÃ£o
+$Excluir = isset($_POST['Excluir']);
 if ($Excluir == 'Excluir') {
 $txtTurma = $_POST['txtTurma'];
   if (empty($txtTurma)){
@@ -194,15 +212,15 @@ $txtTurma = $_POST['txtTurma'];
 $sql = "SELECT * from turmas where turma = '$txtTurma'";
 $res = pg_query($sql);
 if ( pg_num_rows($res) <= 0 ) {
-echo "<script> alert('Esta TURMA não foi cadastrada!') </script>";
+echo "<script> alert('Esta TURMA nÃ£o foi cadastrada!') </script>";
 } else {
 $sql = "DELETE from turmas where turma = '$txtTurma'";
 $res = pg_query($sql);
 if (pg_affected_rows($res)) {
-echo "<script> alert('TURMA excluída com sucesso!') </script>";
+echo "<script> alert('TURMA excluÃ­da com sucesso!') </script>";
 echo "<script language='javascript'>window.location.href='pes_turma.php'</script>";
 } else {
-echo "<script> alert('Houveram problemas na exclusão das informações') </script>";
+echo "<script> alert('Houveram problemas na exclusÃ£o das informaÃ§Ãµes') </script>";
 }
 }
 }
@@ -210,7 +228,7 @@ echo "<script> alert('Houveram problemas na exclusão das informações') </script>
 
 ?>	
 	
-	  <div align="right"><span class="aviso">(*) Campos Obrigatórios</span></div>
+	  <div align="right"><span class="aviso">(*) Campos ObrigatÃ³rios</span></div>
 	  <fieldset class="box_secundario">
       <legend class="titulo">Gerenciamento de Turmas</legend>
       <p>
@@ -218,15 +236,15 @@ echo "<script> alert('Houveram problemas na exclusão das informações') </script>
 	  <table border="0" align="left">
       <tr>
        <td align="right">Turma:</td>
-       <td align="left"><input type="text" name="txtTurma" value="<?php echo $txtTurma; ?>" maxlenght="20" size="25">
+       <td align="left"><input type="text" name="txtTurma" value="<?php $txtTurma; ?>" maxlenght="20" size="25">
 	                    <span class="aviso">*</span>&nbsp;
 	                   <input type="submit" name="Pesquisar" value="Pesquisar" class="botao">
 	   </td>
       </tr>
 	  <tr>
        <td align="right">Curso:</td>
-       <td align="left"><input type="text" name="txtCurso" value="<?php echo $txtCurso;?>" maxlenght="40" size="25">&nbsp;
-	    <a href="#" onClick="window.open('../SGDR/popups/popupcurso.php', 'popupcurso', 'STATUS=NO, TOOLBAR=NO, LOCATION=NO, DIRECTORIES=NO, RESISABLE=NO, SCROLLBARS=YES, TOP=50, LEFT=100, WIDTH=400, HEIGHT=400');">
+       <td align="left"><input type="text" name="txtCurso" value="<?php $txtCurso;?>" maxlenght="40" size="25">&nbsp;
+	    <a href="#" onClick="window.open('../projeto-sgdr/popups/popupcurso.php', 'popupcurso', 'STATUS=NO, TOOLBAR=NO, LOCATION=NO, DIRECTORIES=NO, RESISABLE=NO, SCROLLBARS=YES, TOP=50, LEFT=100, WIDTH=400, HEIGHT=400');">
 		<img src="imagens/icone_buscar.gif" alt="Procurar Cursos" border="0"></a>&nbsp;
 		<span class="aviso">*</span>
 	   </td>
@@ -235,8 +253,8 @@ echo "<script> alert('Houveram problemas na exclusão das informações') </script>
        <td align="right">Turno:</td>
        <td align="left"><select name="turno">
                         <option value="">Selecione o turno</option>
-                        <option value="Manhã - 08:00 às 12:00">Manhã - 08:00 às 12:00</option>
-                        <option value="Noite - 19:00 às 22:00">Noite - 19:00 às 22:00</option>
+                        <option value="ManhÃ£ - 08:00 Ã s 12:00">ManhÃ£ - 08:00 Ã s 12:00</option>
+                        <option value="Noite - 19:00 Ã s 22:00">Noite - 19:00 Ã s 22:00</option>
                         </select>
 						<span class="aviso">*</span>
 						</td>
@@ -252,7 +270,7 @@ echo "<script> alert('Houveram problemas na exclusão das informações') </script>
       				
       </tr>
 	  <td align="right">Quantidade de<br> vagas:</td>
-       <td align="left"><input type="text" name="vaga" value="<?php echo $vaga; ?>" maxlength="2" size="8">
+       <td align="left"><input type="text" name="vaga" value="<?php  $vaga; ?>" maxlength="2" size="8">
 	   <span class="aviso">*</span>
 	   </td>
       				
@@ -274,7 +292,7 @@ echo "<script> alert('Houveram problemas na exclusão das informações') </script>
      <hr size="1">
  </div>
  <div id="rodape">
- Copyright© SGDR - Sistema de Gerenciamento Didático Remoto. Todos os direitos reservados.
+ Copyright&copy; SGDR - Sistema de Gerenciamento DidÃ¡tico Remoto. Todos os direitos reservados.
  </div>
 </div>
 

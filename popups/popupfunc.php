@@ -21,7 +21,7 @@ function retornarPesquisa(txtProf, txtDis, txtCurso) {
 	 <table border="0" align="center">
       <tr>
        <td align="right">Professor:</td>
-       <td align="left"><input type="text" name="txtProf" value="<?php echo $txtProf; ?>" size="30" maxlength="60"></td>
+       <td align="left"><input type="text" name="txtProf" value="<?php  $txtProf; ?>" size="30" maxlength="60"></td>
        <td align="right"><input type="submit" value="Filtrar" class="botao" name="Filtrar"></td>
         </tr>
      </table>
@@ -29,17 +29,17 @@ function retornarPesquisa(txtProf, txtDis, txtCurso) {
      </fieldset>
 	 <br>
 	 <?php
-	  //Conexão com o banco de dados
+	  //ConexÃ£o com o banco de dados
 	  include '../conexao/conexao.php';
 	
 	
-	$txtProf = $_POST["txtProf"];		
-	  $sql = "select professor, disciplina, curso from professores where professor ilike '%$txtProf%' order by professor";
+	$txtProf = isset($_POST["txtProf"]);		
+	  $sql = "SELECT professor, disciplina, curso FROM professores WHERE professor LIKE '%$txtProf%' ORDER BY professor";
 	  $res = pg_query($conexao, $sql); 
 		if (pg_num_rows($res) == 0){
-		  echo "<span class='mensagem'>Não há registro!</span>";
+		  echo "<span class='mensagem'>NÃ£o hÃ¡ registro!</span>";
 		   }else{
-	  //Construção da consulta
+	  //ConstruÃ§Ã£o da consulta
        	echo "<table width='350' border='0' class='corpo_tabela' cellspadding='1' cellspacing='1' align='center'>";
 		echo "<tr>";
 		echo "<td class='topo_tabela' width='100' align='center'>PROFESSORES</td>"; 
@@ -47,7 +47,7 @@ function retornarPesquisa(txtProf, txtDis, txtCurso) {
 		echo "<td class='topo_tabela' width='100' align='center'>CURSOS</td>"; 
 		echo "<td class='topo_tabela' width='50' align='center'>&nbsp;</td>";
 		echo "</tr>";
-		 //Construção de um loop
+		 //Construï¿½ï¿½o de um loop
 		 for ($i=0; $i < pg_num_rows($res); $i++ ) {
 	     echo "<tr>";
 		  $txtProf = pg_fetch_result($res, $i, "professor");
@@ -75,7 +75,7 @@ function retornarPesquisa(txtProf, txtDis, txtCurso) {
  </div>
  <div id="rodape">
   <div align="center"><br>
-   <font color="white" face="calibri"><i>Copyright© SGDR - Sistema de Gerenciamento Didático Remoto.
+   <font color="white" face="calibri"><i>Copyright&copy; SGDR - Sistema de Gerenciamento DidÃ¡tico Remoto.
      Todos os direitos reservados.</i></font>
    </div>
  </div>

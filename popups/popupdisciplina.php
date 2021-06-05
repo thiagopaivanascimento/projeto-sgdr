@@ -24,7 +24,7 @@ function retornarPesquisa(txtDis, txtCurso) {
 	 <table border="0" align="center">
       <tr>
        <td align="right">Disciplina:</td>
-       <td align="left"><input type="text" name="txtDis" value="<?php echo $txtDis; ?>" size="30" maxlength="60"></td>
+       <td align="left"><input type="text" name="txtDis" value="<?php  $txtDis; ?>" size="30" maxlength="60"></td>
        <td align="right"><input type="submit" value="Filtrar" class="botao" name="Filtrar"></td>
         </tr>
      </table>
@@ -33,24 +33,24 @@ function retornarPesquisa(txtDis, txtCurso) {
 
 	 <br>
 	 <?php
-	  //Conex„o com o banco de dados
+	  //Conex√£o com o banco de dados
 	  include '../conexao/conexao.php';
 	
 	
-	$txtDis = $_POST["txtDis"];		
-	   $sql = "select disciplina, curso from disciplinas where disciplina ilike '%$txtDis%' order by disciplina";
+	$txtDis = isset($_POST["txtDis"]);		
+	   $sql = "SELECT disciplina, curso from disciplinas where disciplina like '%$txtDis%' order by disciplina";
 	  $res = pg_query($conexao, $sql);  
 		if (pg_num_rows($res) == 0){
-		  echo "<span class='mensagem'>N„o h· registro!</span>";
+		  echo "<span class='mensagem'>N√£o h√° registro!</span>";
 		   }else{
-	  //ConstruÁ„o da consulta
+	  //Constru√ß√£o da consulta
        	echo "<table width='400' border='0' class='corpo_tabela' cellspadding='1' cellspacing='1' align='center'>";
 		echo "<tr>";
 		echo "<td class='topo_tabela' width='200' align='center'>DISCIPLINAS</td>"; 
 		echo "<td class='topo_tabela' width='100' align='center'>CURSOS</td>";
 		echo "<td class='topo_tabela' width='100' align='center'>&nbsp;</td>";
 		echo "</tr>";
-		 //ConstruÁ„o de um loop
+		 //Constru√ß√£o de um loop
 		 for ($i=0; $i < pg_num_rows($res); $i++ ) {
 	     echo "<tr>";
 		  $txtDis = pg_fetch_result($res, $i, "disciplina");

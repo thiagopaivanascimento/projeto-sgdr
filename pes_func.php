@@ -1,59 +1,75 @@
 <?php
-
-include 'config/valida.php';
-include 'conexao/conexao.php';
-
+    include 'conexao/conexao.php';
+    include 'config/valida.php';
 ?>
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
-<title>::EETEP - Secretaria Virtual::</title>
-
-<link rel="stylesheet" href="css/format.css" type="text/css" />
-<link rel="stylesheet" href="css/link.css" type="text/css" />
-<script type="text/javascript" src="scripts/menu.js"></script>
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::EETEP - Secretaria Virtual::</title>
+    <!--Estilo CSS -->
+    <link rel="stylesheet" href="css/format.css" type="text/css" />
+    <link rel="stylesheet" href="css/link.css" type="text/css" />
+    <!-- Arquivo JavaScript -->
+    <script type="text/javascript" src="scripts/menu.js"></script>
+	<script type="text/javascript" src="scripts/scriptFormAluno.js"></script>
 </head>
-<body onLoad="horizontal();" vlink="white" alink="white">
- <div id="geral">
- <div id="topo">
-</div>
-<div id="nav">
-<ul id="menu_dropdown" class="menubar">
-        <li class="submenu"><a href="administracao.php"><img src="imagens/icone_home.gif" alt="P·gina Inicial">Home</a></li>
-		<li class="submenu"><a href="#"><img src="imagens/icone_cli.gif" alt="Efetuar cadastros">Cadastro</a></li>
-        <ul class="menu">
-	    <li><a href="cad_aluno.php">Alunos</a></li>
-        <li><a href="cad_func.php">Professores</a></li>
-        <li><a href="cad_usuario.php">Usu·rios</a></li>
-	   </ul>
-   <li class="submenu"><a href="#"><img src="imagens/icone_ger.gif" alt="Gerenciamento">Gerenciamento</a>
-      <ul class="menu">
-	    <li><a href="cad_curso.php">Cursos</a></li>
-		<li><a href="cad_disciplina.php">Disciplinas</a></li>
-        <li><a href="ger_material.php">Material Did·ticos</a></li>
-        <li><a href="ger_turma.php">Turmas</a></li>
-      </ul>
-   </li>
-   <li class="submenu"><a href="downloads/"><img src="imagens/icone_pasta.gif" alt="Visualizar Material">Pasta</a></li>		
-   <li class="submenu"><a href="#"><img src="imagens/icone_rel.gif" alt="Visualizar RelatÛrios">RelatÛrio</a>
-      <ul class="menu">
-        <li><a href="relatorios/rel_aluno.php">Alunos</a></li>
-        <li><a href="relatorios/rel_func.php">Professores</a></li>
-        <li><a href="relatorios/rel_curso.php">Cursos</a></li>
-		<li><a href="relatorios/rel_disciplina.php">Disciplinas</a></li>
-		<li><a href="relatorios/rel_material.php">Material Did·ticos</a></li>
-        <li><a href="relatorios/rel_turma.php">Turmas</a></li>
-		<li><a href="relatorios/rel_usuario.php">Usu·rios</a></li>
-      </ul>
-   </li>
-    </li>
-   <li class="submenu"><a href="#"><img src="imagens/icone_ajuda.gif" alt="Ajuda">Ajuda</a></li>
-     <ul class="menu">
-         <li><a href="manual.pdf">Manual do Usu·rio</a></li>
-        </ul>
-   <li class="submenu"><a href="logout.php" onClick="return confirm('VocÍ deseja realmente sair?')"><img src="imagens/icone_sair.gif" alt="Logout">Sair</a></li>
-</ul>
- </div>
+
+<body onLoad="horizontal();" vlink="white" alink="white"> 
+ <div id="geral"> 
+    <div id="topo">
+          <!--IMG Topo - Arquivo CSS -->  
+    </div>
+    <div id="nav">
+        <ul id="menu_dropdown" class="menubar">
+            <li class="submenu">
+                <a href="administracao.php"><img src="imagens/icone_home.gif" alt="P√°gina Inicial">Home</a>
+            </li>
+            <li class="submenu">
+                <a href="#"><img src="imagens/icone_cli.gif" alt="Efetuar cadastros">Cadastro</a>
+                <ul class="menu">
+                    <li><a href="cad_aluno.php">Alunos</a></li>
+                    <li><a href="cad_func.php">Professores</a></li>
+                    <li><a href="cad_usuario.php">Usu√°rios</a></li>
+                </ul>    
+            </li> <!--/ li submenu-->
+            <li class="submenu">
+                <a href="#"><img src="imagens/icone_ger.gif" alt="Gerenciamento">Gerenciamento</a>
+                <ul class="menu">
+                    <li><a href="cad_curso.php">Cursos</a></li>
+                    <li><a href="cad_disciplina.php">Disciplinas</a></li>
+                    <li><a href="ger_material.php">Material Did√°ticos</a></li>
+                    <li><a href="ger_turma.php">Turmas</a></li>
+                </ul>
+            </li><!--/ li submenu-->
+            <li class="submenu">
+                <a href="#"><img src="imagens/icone_rel.gif" alt="Visualizar Relat√≥rios">Relat√≥rio</a>
+                <ul class="menu">
+                    <li><a href="relatorios/rel_aluno.php">Alunos</a></li>
+                    <li><a href="relatorios/rel_func.php">Professores</a></li>
+                    <li><a href="relatorios/rel_curso.php">Cursos</a></li>
+                    <li><a href="relatorios/rel_disciplina.php">Disciplinas</a></li>
+                    <li><a href="relatorios/rel_material.php">Material Did√°ticos</a></li>
+                    <li><a href="relatorios/rel_turma.php">Turmas</a></li>
+                    <li><a href="relatorios/rel_usuario.php">Usu√°rios</a></li>
+                </ul>
+            </li><!--/ li submenu-->
+           <li class="submenu">
+               <a href="downloads/"><img src="imagens/icone_pasta.gif" alt="Visualizar Material">Pasta</a>
+            </li><!--/ li submenu-->		
+            <!--<li class="submenu">
+                <a href="#"><img src="imagens/icone_ajuda.gif" alt="Ajuda">Ajuda</a>
+                <ul class="menu">
+                    <li><a href="manual.pdf">Manual do Usu√°rio</a></li>
+                </ul>
+            </li>--><!--/ li submenu-->		    
+            <li class="submenu">
+                <a href="logout.php" onClick="return confirm('Voc√™ deseja realmente sair?')"><img src="imagens/icone_sair.gif" alt="Logout">Sair</a>
+            </li>
+        </ul><!--/ul class menubar -->
+    </div>
  <div id="conteudo">
     <br>
 	<div align="center">
@@ -63,7 +79,7 @@ include 'conexao/conexao.php';
      <table border="0" align="center">
       <tr>
       <td align="right">Informe o nome do Professor: </td>
-      <td align="left"><input type="text" name="txtProf" value="<?php echo $txtProf;?>" size="30"></td>
+      <td align="left"><input type="text" name="txtProf" value="<?php  $txtProf;?>" size="30"></td>
       <td align="right"><input type="submit" name="Filtrar" value="Filtrar" class="botao"></td>
       <td align="left"><input type="button" value="Voltar" class="botao" onClick="javascript:window.location.href = 'cad_func.php'"></td>
       </tr>
@@ -72,17 +88,17 @@ include 'conexao/conexao.php';
      </fieldset>
 	 <p>
 	 <?php
-	  //Conex„o com o banco de dados
+	  //Conex√£o com o banco de dados
 	  include 'conexao/conexao.php';
 	
 	
 	$txtProf = $_POST["txtProf"];		
-      $sql = "SELECT * from professores where professor ilike '%$txtProf%' order by professor";
+      $sql = "SELECT * from professores where professor like '%$txtProf%' order by professor";
 	  $res = pg_query($conexao, $sql); 
 		if (pg_num_rows($res) == 0){
-		  echo "<span class='mensagem'>N„o h· registro!</span>";
+		  echo "<span class='mensagem'>N√£o h√° registro!</span>";
 		   }else{
-	  //ConstruÁ„o da consulta
+	  //Constru√ß√£o da consulta
        	echo "<table width='700' border='0' class='corpo_tabela' cellspadding='1' cellspacing='1' align='center'>";
 		echo "<tr>";
 		echo "<td class='topo_tabela' width='125' align='center'>PROFESSORES</td>"; 
@@ -92,7 +108,7 @@ include 'conexao/conexao.php';
 		echo "<td class='topo_tabela' width='100' align='center'>TURNO</td>";
 		echo "<td class='topo_tabela' width='100' align='center'>CURSO</td>";
 		echo "</tr>";
-		 //ConstruÁ„o de um loop
+		 //Constru√ß√£o de um loop
 		 for ($i=0; $i < pg_num_rows($res); $i++ ) {
 		  	$txtProf = pg_fetch_result($res,$i,'professor');
 			$txtCPF = pg_fetch_result($res,$i,'cpf');
@@ -125,7 +141,7 @@ include 'conexao/conexao.php';
 
 
  <div id="rodape">
-  Copyright© SGDR - Sistema de Gerenciamento Did·tico Remoto. Todos os direitos reservados.
+  Copyright&copy; SGDR - Sistema de Gerenciamento Did√°tico Remoto. Todos os direitos reservados.
  </div>
 </div>
 

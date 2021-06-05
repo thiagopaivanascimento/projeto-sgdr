@@ -1,69 +1,85 @@
 <?php
-include 'conexao/conexao.php';
-include 'config/valida.php';
+    include 'conexao/conexao.php';
+    include 'config/valida.php';
 ?>
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<title>::EETEP - Secretaria Virtual::</title>
-
-<link rel="stylesheet" href="css/format.css" type="text/css" />
-<link rel="stylesheet" href="css/link.css" type="text/css" />
-<script type="text/javascript" src="scripts/menu.js"></script>
-<script type="text/javascript" src="scripts/scriptFormProf.js"></script>
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::EETEP - Secretaria Virtual::</title>
+    <!--Estilo CSS -->
+    <link rel="stylesheet" href="css/format.css" type="text/css" />
+    <link rel="stylesheet" href="css/link.css" type="text/css" />
+    <!-- Arquivo JavaScript -->
+    <script type="text/javascript" src="scripts/menu.js"></script>
+	<script type="text/javascript" src="scripts/scriptFormAluno.js"></script>
 </head>
-<body onLoad="horizontal();" vlink="white" alink="white">
- <div id="geral">
- <div id="topo">
- </div>
-<div id="nav">
-<ul id="menu_dropdown" class="menubar">
-        <li class="submenu"><a href="administracao.php"><img src="imagens/icone_home.gif" alt="Página Inicial">Home</a></li>
-		<li class="submenu"><a href="#"><img src="imagens/icone_cli.gif" alt="Efetuar cadastros">Cadastro</a></li>
-        <ul class="menu">
-	    <li><a href="cad_aluno.php">Alunos</a></li>
-        <li><a href="cad_func.php">Professores</a></li>
-        <li><a href="cad_usuario.php">Usuários</a></li>
-	   </ul>
-   <li class="submenu"><a href="#"><img src="imagens/icone_ger.gif" alt="Gerenciamento">Gerenciamento</a>
-      <ul class="menu">
-	    <li><a href="cad_curso.php">Cursos</a></li>
-		<li><a href="cad_disciplina.php">Disciplinas</a></li>
-        <li><a href="ger_material.php">Material Didáticos</a></li>
-        <li><a href="ger_turma.php">Turmas</a></li>
-      </ul>
-   </li>
-   <li class="submenu"><a href="downloads/"><img src="imagens/icone_pasta.gif" alt="Visualizar Material">Pasta</a></li>		
-   <li class="submenu"><a href="#"><img src="imagens/icone_rel.gif" alt="Visualizar Relatórios">Relatório</a>
-      <ul class="menu">
-        <li><a href="relatorios/rel_aluno.php">Alunos</a></li>
-        <li><a href="relatorios/rel_func.php">Professores</a></li>
-        <li><a href="relatorios/rel_curso.php">Cursos</a></li>
-		<li><a href="relatorios/rel_disciplina.php">Disciplinas</a></li>
-		<li><a href="relatorios/rel_material.php">Material Didáticos</a></li>
-        <li><a href="relatorios/rel_turma.php">Turmas</a></li>
-		<li><a href="relatorios/rel_usuario.php">Usuários</a></li>
-      </ul>
-   </li>
-    </li>
-   <li class="submenu"><a href="#"><img src="imagens/icone_ajuda.gif" alt="Ajuda">Ajuda</a></li>
-     <ul class="menu">
-         <li><a href="manual.pdf">Manual do Usuário</a></li>
-        </ul>
-   <li class="submenu"><a href="logout.php" onClick="return confirm('Você deseja realmente sair?')"><img src="imagens/icone_sair.gif" alt="Logout">Sair</a></li>
-</ul>
- </div>
+
+<body onLoad="horizontal();" vlink="white" alink="white"> 
+ <div id="geral"> 
+    <div id="topo">
+          <!--IMG Topo - Arquivo CSS -->  
+    </div>
+    <div id="nav">
+        <ul id="menu_dropdown" class="menubar">
+            <li class="submenu">
+                <a href="administracao.php"><img src="imagens/icone_home.gif" alt="PÃ¡gina Inicial">Home</a>
+            </li>
+            <li class="submenu">
+                <a href="#"><img src="imagens/icone_cli.gif" alt="Efetuar cadastros">Cadastro</a>
+                <ul class="menu">
+                    <li><a href="cad_aluno.php">Alunos</a></li>
+                    <li><a href="cad_func.php">Professores</a></li>
+                    <li><a href="cad_usuario.php">UsuÃ¡rios</a></li>
+                </ul>    
+            </li> <!--/ li submenu-->
+            <li class="submenu">
+                <a href="#"><img src="imagens/icone_ger.gif" alt="Gerenciamento">Gerenciamento</a>
+                <ul class="menu">
+                    <li><a href="cad_curso.php">Cursos</a></li>
+                    <li><a href="cad_disciplina.php">Disciplinas</a></li>
+                    <li><a href="ger_material.php">Material DidÃ¡ticos</a></li>
+                    <li><a href="ger_turma.php">Turmas</a></li>
+                </ul>
+            </li><!--/ li submenu-->
+            <li class="submenu">
+                <a href="#"><img src="imagens/icone_rel.gif" alt="Visualizar RelatÃ³rios">RelatÃ³rio</a>
+                <ul class="menu">
+                    <li><a href="relatorios/rel_aluno.php">Alunos</a></li>
+                    <li><a href="relatorios/rel_func.php">Professores</a></li>
+                    <li><a href="relatorios/rel_curso.php">Cursos</a></li>
+                    <li><a href="relatorios/rel_disciplina.php">Disciplinas</a></li>
+                    <li><a href="relatorios/rel_material.php">Material DidÃ¡ticos</a></li>
+                    <li><a href="relatorios/rel_turma.php">Turmas</a></li>
+                    <li><a href="relatorios/rel_usuario.php">UsuÃ¡rios</a></li>
+                </ul>
+            </li><!--/ li submenu-->
+           <li class="submenu">
+               <a href="downloads/"><img src="imagens/icone_pasta.gif" alt="Visualizar Material">Pasta</a>
+            </li><!--/ li submenu-->		
+            <!--<li class="submenu">
+                <a href="#"><img src="imagens/icone_ajuda.gif" alt="Ajuda">Ajuda</a>
+                <ul class="menu">
+                    <li><a href="manual.pdf">Manual do UsuÃ¡rio</a></li>
+                </ul>
+            </li>--><!--/ li submenu-->		    
+            <li class="submenu">
+                <a href="logout.php" onClick="return confirm('VocÃª deseja realmente sair?')"><img src="imagens/icone_sair.gif" alt="Logout">Sair</a>
+            </li>
+        </ul><!--/ul class menubar -->
+    </div>
  <div id="conteudo">
    <img src="imagens/icone_material.gif">
    <hr size="1">
     <br>
 <?php
-	//Conexão ao Banco de Dados
+	//Conexï¿½o ao Banco de Dados
 	include 'conexao/conexao.php';
 
-	//Operação de Inclusão
-	$Incluir = $_POST["Incluir"];
+	//Operaï¿½ï¿½o de Inclusï¿½o
+	$Incluir = isset($_POST["Incluir"]);
 	 if ($Incluir == 'Incluir'){
 	
 	$txtMat = $_POST["txtMat"];
@@ -73,7 +89,7 @@ include 'config/valida.php';
 	$txtNasc = $_POST["txtNasc"];
 	
 	if (empty($txtMat)){
-	echo "<script> alert('- Por favor, informe o MATERIAL DIDÁTICO.') </script>";
+	echo "<script> alert('- Por favor, informe o MATERIAL DIDÃTICO.') </script>";
 	}
 	else if (empty($txtProf)){ 
 	echo "<script> alert('- Por favor, informe o PROFESSOR.') </script>";
@@ -91,34 +107,34 @@ include 'config/valida.php';
 	$sql = "SELECT * from materiais where material = '$txtMat'";
 	$res = pg_query($sql); 
 	 if (pg_num_rows($res)){
-	  echo "<script> alert('Material Didático já cadastrado.') </script>";
+	  echo "<script> alert('Material DidÃ¡tico jÃ¡ cadastrado.') </script>";
 	   }else{
 	     $sql = "INSERT into materiais(material, data, professor, disciplina, curso) values ('$txtMat', '$txtNasc', 
 		 '$txtProf', '$txtDis', '$txtCurso')";
 	     $res = pg_query($sql);
 		  if(pg_affected_rows($res)){
-		   echo "<script> alert('Material Didático cadastrado com sucesso!') </script>";
-		   echo "<script> alert('Agora, envie o material didático para downloads!') </script>";
+		   echo "<script> alert('Material DidÃ¡tico cadastrado com sucesso!') </script>";
+		   echo "<script> alert('Agora, envie o material didÃ¡tico para downloads!') </script>";
 		   echo "<script language='javascript'>window.location.href='envio_material.php'</script>";
 			}else{
-			  echo "<script> alert('Houveram problemas na gravação das informações.') </script>";
+			  echo "<script> alert('Houveram problemas na gravaÃ§Ã£o das informaÃ§Ãµes.') </script>";
 		}	 
 	  }
 	}
    }
    
-   //Operação de Pesquisa
-   $Pesquisar = $_POST["Pesquisar"];	
+   //OperaÃ§Ã£o de Pesquisa
+   $Pesquisar = isset($_POST["Pesquisar"]);	
     if($Pesquisar == 'Pesquisar'){
 		$txtMat = $_POST["txtMat"];
   if (empty($txtMat)){
-   	echo "<script> alert('- O MATERIAL DIDÁTICO deve ser informado.') </script>";
+   	echo "<script> alert('- O MATERIAL DIDÃTICO deve ser informado.') </script>";
 	}
 	 if( !empty($txtMat)) {
   $sql = "SELECT * from materiais where material='$txtMat'";
   $res = pg_query($conexao, $sql);
   if (pg_num_rows($res) == 0) {
-     echo "<script> alert('Material não cadastrado.') </script>";
+     echo "<script> alert('Material nÃ£o cadastrado.') </script>";
   }
   else {
     $txtMat = pg_fetch_result($res, 0, "material");
@@ -132,27 +148,27 @@ include 'config/valida.php';
 }
  
   
-// Operação de Exclusão
-$Excluir = $_POST['Excluir'];
+// OperaÃ§Ã£o de ExclusÃ£o
+$Excluir = isset($_POST['Excluir']);
 if ($Excluir == 'Excluir') {
 $txtMat = $_POST["txtMat"];
   if (empty($txtMat)){
-   	echo "<script> alert('- O MATERIAL DIDÁTICO deve ser informado.') </script>";
+   	echo "<script> alert('- O MATERIAL DIDÃTICO deve ser informado.') </script>";
 	}
 	 if( !empty($txtMat)) {
 $txtMat = $_POST['txtMat'];
 $sql = "SELECT * from materiais where material = '$txtMat'";
 $res = pg_query($sql);
 if ( pg_num_rows($res) <= 0 ) {
-echo "<script> alert('Este material não foi cadastrado!') </script>";
+echo "<script> alert('Este material nÃ£o foi cadastrado!') </script>";
 } else {
 $sql = "DELETE from materiais where material = '$txtMat'";
 $res = pg_query($sql);
 if (pg_affected_rows($res)) {
-echo "<script> alert('Material excluído com sucesso!') </script>";
+echo "<script> alert('Material excluÃ­do com sucesso!') </script>";
 echo "<script language='javascript'>window.location.href='pes_material.php'</script>";
 } else {
-echo "<script> alert('Houveram problemas na exclusão das informações') </script>";
+echo "<script> alert('Houveram problemas na exclusÃ£o das informaÃ§Ãµes') </script>";
 }
 }
 }
@@ -160,29 +176,29 @@ echo "<script> alert('Houveram problemas na exclusão das informações') </script>
 ?>
 <?php
 
-if (isset($arquivo)) // Verificamos se a variável "arquivo" existe
+if (isset($arquivo)) // Verificamos se a variÃ¡vel "arquivo" existe
 {
-$nome = rand(00,9999); // Aqui criamos um número randômico, para utilizarmos como nome do arquivo
-$dir="C:/Apache2.2/htdocs/SGDR/downloads"; //Esse é o diretório onde ficará os arquivos enviados, lembre-se de criá-lo. Este script não cria diretórios
+$nome = rand(00,9999); // Aqui criamos um nÃºmero randÃ´mico, para utilizarmos como nome do arquivo
+$dir="C:/wamp64/www/projeto-sgdr/downloads"; //Esse Ã© o diretÃ³rio onde ficarÃ¡ os arquivos enviados, lembre-se de criÃ¡-lo. Este script nÃ£o cria diretÃ³rios
 
-if (is_uploaded_file($arquivo)) // Verificamos se existe algum arquivo na variável "Arquivo"
+if (is_uploaded_file($arquivo)) // Verificamos se existe algum arquivo na variÃ¡vel "Arquivo"
 { move_uploaded_file($arquivo,$dir.$nome.$arquivo_name); // Aqui, efetuamos o upload, propriamente dito
- echo "<script> alert('Material Didático enviado com sucesso!') </script> "; // Caso dê tudo certo, imprimi na tela "enviado"
+ echo "<script> alert('Material DidÃ¡tico enviado com sucesso!') </script> "; // Caso dÃª tudo certo, imprimi na tela "enviado"
 }else{
  echo "<script> alert('Erro ao enviar!') </script> "; // Caso ocorra algum erro, imprimi na tela "erro"
 }
 }
 
 ?>
-     <div align="right"><span class="aviso">(*) Campos Obrigatórios</span></div>
+     <div align="right"><span class="aviso">(*) Campos ObrigatÃ³rios</span></div>
 	 <div align="center">
 	 <fieldset class="box_secundario">
-      <legend class="titulo">Gerenciamento de Material Didático</legend>
+      <legend class="titulo">Gerenciamento de Material DidÃ¡tico</legend>
       <p>
 	  <form action="ger_material.php" method="POST" name="FormProf">
 	  <table border="0" cellpadding="2" cellspacing="2" width="500">
 	  <tr>
-	  <td align="right">Material Didático:</td>
+	  <td align="right">Material DidÃ¡tico:</td>
 	  <td align="left"><input type="text" name="txtMat" value="<?php $txtMat; ?>" size="30" maxlength="60">
 	  					<span class="aviso">*</span>&nbsp;
 	                   <input type="submit" name="Pesquisar" value="Pesquisar" class="botao">
@@ -191,7 +207,7 @@ if (is_uploaded_file($arquivo)) // Verificamos se existe algum arquivo na variáv
 	  <tr>
 	  <td align="right">Professor:</td>
 	  <td align="left"><input type="text" name="txtProf" value="<?php $txtProf; ?>" size="30" maxlength="60">
- 	  <a href="#" onClick="window.open('../SGDR/popups/popupfunc.php', 'popupfunc', 'STATUS=NO, TOOLBAR=NO, LOCATION=NO, DIRECTORIES=NO,      RESISABLE=NO, SCROLLBARS=YES, TOP=50, LEFT=100, WIDTH=400, HEIGHT=400');">
+ 	  <a href="#" onClick="window.open('../projeto-sgdr/popups/popupfunc.php', 'popupfunc', 'STATUS=NO, TOOLBAR=NO, LOCATION=NO, DIRECTORIES=NO,      RESISABLE=NO, SCROLLBARS=YES, TOP=50, LEFT=100, WIDTH=400, HEIGHT=400');">
 	  <img src="imagens/icone_buscar.gif" alt="Procurar Professores" border="0"></a>&nbsp;
 	  <span class="aviso">*</span>
 	  </td>
@@ -228,7 +244,7 @@ if (is_uploaded_file($arquivo)) // Verificamos se existe algum arquivo na variáv
  </div>
  </div>
   <div id="rodape">
-  Copyright© SGDR - Sistema de Gerenciamento Didático Remoto. Todos os direitos reservados.
+  Copyright&copy; SGDR - Sistema de Gerenciamento DidÃ¡tico Remoto. Todos os direitos reservados.
    </div>
  </div>
 </div>

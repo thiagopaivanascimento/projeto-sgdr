@@ -1,84 +1,99 @@
 <?php
-
-include 'config/valida.php';
-include 'conexao/conexao.php';
-
+    include 'conexao/conexao.php';
+    include 'config/valida.php';
 ?>
-<html>
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
-<title>::EETEP - Secretaria Virtual::</title>
-
-<link rel="stylesheet" href="css/format.css" type="text/css" />
-<link rel="stylesheet" href="css/link.css" type="text/css" />
-<script type="text/javascript" src="scripts/menu.js"></script>
-<script type="text/javascript" src="scripts/scriptFormProf.js"></script>
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>::EETEP - Secretaria Virtual::</title>
+    <!--Estilo CSS -->
+    <link rel="stylesheet" href="css/format.css" type="text/css" />
+    <link rel="stylesheet" href="css/link.css" type="text/css" />
+    <!-- Arquivo JavaScript -->
+    <script type="text/javascript" src="scripts/menu.js"></script>
+	<script type="text/javascript" src="scripts/scriptFormAluno.js"></script>
 </head>
-<body onLoad="horizontal();" vlink="white" alink="white">
- <div id="geral">
- <div id="topo">
-</div>
-<div id="nav">
-<ul id="menu_dropdown" class="menubar">
-        <li class="submenu"><a href="administracao.php"><img src="imagens/icone_home.gif" alt="P·gina Inicial">Home</a></li>
-		<li class="submenu"><a href="#"><img src="imagens/icone_cli.gif" alt="Efetuar cadastros">Cadastro</a></li>
-        <ul class="menu">
-	    <li><a href="cad_aluno.php">Alunos</a></li>
-        <li><a href="cad_func.php">Professores</a></li>
-        <li><a href="cad_usuario.php">Usu·rios</a></li>
-	   </ul>
-   <li class="submenu"><a href="#"><img src="imagens/icone_ger.gif" alt="Gerenciamento">Gerenciamento</a>
-      <ul class="menu">
-	    <li><a href="cad_curso.php">Cursos</a></li>
-		<li><a href="cad_disciplina.php">Disciplinas</a></li>
-        <li><a href="ger_material.php">Material Did·ticos</a></li>
-        <li><a href="ger_turma.php">Turmas</a></li>
-      </ul>
-   </li>
-   <li class="submenu"><a href="downloads/"><img src="imagens/icone_pasta.gif" alt="Visualizar Material">Pasta</a></li>		
-   <li class="submenu"><a href="#"><img src="imagens/icone_rel.gif" alt="Visualizar RelatÛrios">RelatÛrio</a>
-      <ul class="menu">
-        <li><a href="relatorios/rel_aluno.php">Alunos</a></li>
-        <li><a href="relatorios/rel_func.php">Professores</a></li>
-        <li><a href="relatorios/rel_curso.php">Cursos</a></li>
-		<li><a href="relatorios/rel_disciplina.php">Disciplinas</a></li>
-		<li><a href="relatorios/rel_material.php">Material Did·ticos</a></li>
-        <li><a href="relatorios/rel_turma.php">Turmas</a></li>
-		<li><a href="relatorios/rel_usuario.php">Usu·rios</a></li>
-      </ul>
-   </li>
-    </li>
-   <li class="submenu"><a href="#"><img src="imagens/icone_ajuda.gif" alt="Ajuda">Ajuda</a></li>
-     <ul class="menu">
-         <li><a href="manual.pdf">Manual do Usu·rio</a></li>
-        </ul>
-   <li class="submenu"><a href="logout.php" onClick="return confirm('VocÍ deseja realmente sair?')"><img src="imagens/icone_sair.gif" alt="Logout">Sair</a></li>
-</ul>
- </div>
+
+<body onLoad="horizontal();" vlink="white" alink="white"> 
+ <div id="geral"> 
+    <div id="topo">
+          <!--IMG Topo - Arquivo CSS -->  
+    </div>
+    <div id="nav">
+        <ul id="menu_dropdown" class="menubar">
+            <li class="submenu">
+                <a href="administracao.php"><img src="imagens/icone_home.gif" alt="P√°gina Inicial">Home</a>
+            </li>
+            <li class="submenu">
+                <a href="#"><img src="imagens/icone_cli.gif" alt="Efetuar cadastros">Cadastro</a>
+                <ul class="menu">
+                    <li><a href="cad_aluno.php">Alunos</a></li>
+                    <li><a href="cad_func.php">Professores</a></li>
+                    <li><a href="cad_usuario.php">Usu√°rios</a></li>
+                </ul>    
+            </li> <!--/ li submenu-->
+            <li class="submenu">
+                <a href="#"><img src="imagens/icone_ger.gif" alt="Gerenciamento">Gerenciamento</a>
+                <ul class="menu">
+                    <li><a href="cad_curso.php">Cursos</a></li>
+                    <li><a href="cad_disciplina.php">Disciplinas</a></li>
+                    <li><a href="ger_material.php">Material Did√°ticos</a></li>
+                    <li><a href="ger_turma.php">Turmas</a></li>
+                </ul>
+            </li><!--/ li submenu-->
+            <li class="submenu">
+                <a href="#"><img src="imagens/icone_rel.gif" alt="Visualizar Relat√≥rios">Relat√≥rio</a>
+                <ul class="menu">
+                    <li><a href="relatorios/rel_aluno.php">Alunos</a></li>
+                    <li><a href="relatorios/rel_func.php">Professores</a></li>
+                    <li><a href="relatorios/rel_curso.php">Cursos</a></li>
+                    <li><a href="relatorios/rel_disciplina.php">Disciplinas</a></li>
+                    <li><a href="relatorios/rel_material.php">Material Did√°ticos</a></li>
+                    <li><a href="relatorios/rel_turma.php">Turmas</a></li>
+                    <li><a href="relatorios/rel_usuario.php">Usu√°rios</a></li>
+                </ul>
+            </li><!--/ li submenu-->
+           <li class="submenu">
+               <a href="downloads/"><img src="imagens/icone_pasta.gif" alt="Visualizar Material">Pasta</a>
+            </li><!--/ li submenu-->		
+            <!--<li class="submenu">
+                <a href="#"><img src="imagens/icone_ajuda.gif" alt="Ajuda">Ajuda</a>
+                <ul class="menu">
+                    <li><a href="manual.pdf">Manual do Usu√°rio</a></li>
+                </ul>
+            </li>--><!--/ li submenu-->		    
+            <li class="submenu">
+                <a href="logout.php" onClick="return confirm('Voc√™ deseja realmente sair?')"><img src="imagens/icone_sair.gif" alt="Logout">Sair</a>
+            </li>
+        </ul><!--/ul class menubar -->
+    </div>
  <div id="conteudo">
    <img src="imagens/icone_func.gif">
    <hr size="1">
    <br>
    <?php
-	//Conex„o ao Banco de Dados
+	//Conex√£o ao Banco de Dados
 	include 'conexao/conexao.php';
 
-	//OperaÁ„o de Inclus„o
-	$Incluir = $_POST["Incluir"];
+	//Opera√ß√£o de Inclus√£o
+	$Incluir = isset($_POST["Incluir"]);
 	 if ($Incluir == 'Incluir'){
 	
 	$txtCPF = $_POST["txtCPF"];
 	$txtRG = $_POST["txtRG"];
 	$txtOrgExp = $_POST["txtOrgExp"];
 	$txtProf = $_POST["txtProf"];
-    $sexo = $_POST["sexo"];
+    $sexo = isset($_POST["sexo"]);
 	$txtNasc = $_POST["txtNasc"];
 	$civil = $_POST["civil"];
 	$txtEnd = $_POST["txtEnd"];
 	$txtBairro = $_POST["txtBairro"];
 	$txtCEP = $_POST["txtCEP"];
 	$txtCidade = $_POST["txtCidade"];
-	$uf = $_POST["uf"];
+	$uf = isset($_POST["uf"]);
 	$txtTel = $_POST["txtTel"];
 	$txtCel = $_POST["txtCel"];
 	$txtEmail = $_POST["txtEmail"];
@@ -97,7 +112,7 @@ include 'conexao/conexao.php';
 	echo "<script> alert('- Por favor, informe a IDENTIDADE.') </script>";
 	}	
 	else if (empty($txtOrgExp)){ 
-	echo "<script> alert('- Por favor, informe o ORG√O EXPEDIDOR.') </script>";
+	echo "<script> alert('- Por favor, informe o ORG√ÉO EXPEDIDOR.') </script>";
 	}
 	else if (empty($txtProf)){ 
 	echo "<script> alert('- Por favor, informe o PROFESSOR(A).') </script>";
@@ -112,7 +127,7 @@ include 'conexao/conexao.php';
 	echo "<script> alert('- Por favor, informe o ESTADO CIVIL.') </script>";
 	}	
 	else if (empty($txtEnd)){ 
-	echo "<script> alert('- Por favor, informe o ENDERE«O.') </script>";
+	echo "<script> alert('- Por favor, informe o ENDERE√áO.') </script>";
 	}	
 	else if (empty($txtBairro)){ 
 	echo "<script> alert('- Por favor, informe o BAIRRO.') </script>";
@@ -148,7 +163,7 @@ include 'conexao/conexao.php';
 	echo "<script> alert('- Por favor, informe a SENHA.') </script>";
 	}
 	else if (empty($nome)){ 
-	echo "<script> alert('- Por favor, informe o NOME de USU¡RIO.') </script>";
+	echo "<script> alert('- Por favor, informe o NOME de USU√ÅRIO.') </script>";
 	}	
 	if (!empty($txtCPF) and !empty($txtRG) and !empty($txtOrgExp) and !empty($txtProf) and !empty($txtNasc)
 	 and !empty($sexo) and !empty($civil) and !empty($txtEnd) and !empty($txtBairro) and !empty($txtCEP)
@@ -158,24 +173,24 @@ include 'conexao/conexao.php';
 	$sql = "SELECT * from professores where cpf = '$txtCPF'";
 	$res = pg_query($sql); 
 	 if (pg_num_rows($res)){
-	  echo "<script> alert('Professor j· cadastrado.') </script>";
+	  echo "<script> alert('Professor j√° cadastrado.') </script>";
 	   }else{
 	     $sql = "INSERT into professores(cpf, rg, org_exp, professor, nascimento, sexo, civil, endereco, bairro, cep, cidade, uf, telefone, celular, email,  disciplina, turno, curso, login, senha, nome) values ('$txtCPF', '$txtRG', '$txtOrgExp', '$txtProf', '$txtNasc', '$sexo', '$civil', '$txtEnd', '$txtBairro', '$txtCEP', '$txtCidade', '$uf', '$txtTel', '$txtCel', '$txtEmail', '$txtDis', '$turno', '$txtCurso', '$login', '$senha', '$nome')";
 	     $res = pg_query($sql);
 		  if(pg_affected_rows($res)){
-		   mkdir ("C:/Apache2.2/htdocs/SGDR/materiais/$txtProf", 0700);
+		   mkdir ("C:/wamp64/www/projeto-sgdr/materiais/$txtProf", 0700);
 		   echo "<script> alert('Professor cadastrado com sucesso!') </script>";
 		   echo "<script> alert('Foi criada uma SUBPASTA do professor na pasta de MATERIAL!') </script>";
-		   echo "<script language='javascript'>window.location.href='pes_func.php'</script>";
+		   "<script language='javascript'>window.location.href='pes_func.php'</script>";
 			}else{
-			  echo "<script> alert('Houveram problemas na gravaÁ„o das informaÁıes.') </script>";
+			  echo "<script> alert('Houveram problemas na grava√ß√£o das informa√ß√µes.') </script>";
 		}	 
 	  }
 	}
    }
    
-   //OperaÁ„o de Pesquisa
-   $Pesquisar = $_POST["Pesquisar"];	
+   //Opera√ß√£o de Pesquisa
+   $Pesquisar = isset($_POST["Pesquisar"]);	
     if($Pesquisar == 'Pesquisar'){
 		$txtCPF = $_POST["txtCPF"];
   if (empty($txtCPF)){
@@ -185,7 +200,7 @@ include 'conexao/conexao.php';
   $sql = "SELECT * from professores where cpf='$txtCPF'";
   $res = pg_query($conexao, $sql);
   if (pg_num_rows($res) == 0) {
-     echo "<script> alert('Professor n„o cadastrado.') </script>";
+     echo "<script> alert('Professor n√£o cadastrado.') </script>";
   }
   else {
     $txtCPF = pg_fetch_result($res,0,'cpf');
@@ -214,8 +229,8 @@ include 'conexao/conexao.php';
   }
 }
 
-  //OperaÁ„o de AlteraÁ„o
-  $Alterar = $_POST['Alterar'];
+  //Opera√ß√£o de Altera√ß√£o
+  $Alterar = isset($_POST['Alterar']);
 if ($Alterar == 'Alterar') {
 	$txtCPF = $_POST["txtCPF"];
 	$txtRG = $_POST["txtRG"];
@@ -246,7 +261,7 @@ if ($Alterar == 'Alterar') {
 	echo "<script> alert('- Por favor, informe a IDENTIDADE.') </script>";
 	}	
 	else if (empty($txtOrgExp)){ 
-	echo "<script> alert('- Por favor, informe o ORG√O EXPEDIDOR.') </script>";
+	echo "<script> alert('- Por favor, informe o ORG√ÉO EXPEDIDOR.') </script>";
 	}
 	else if (empty($txtProf)){ 
 	echo "<script> alert('- Por favor, informe o PROFESSOR(A).') </script>";
@@ -261,7 +276,7 @@ if ($Alterar == 'Alterar') {
 	echo "<script> alert('- Por favor, informe o ESTADO CIVIL.') </script>";
 	}	
 	else if (empty($txtEnd)){ 
-	echo "<script> alert('- Por favor, informe o ENDERE«O.') </script>";
+	echo "<script> alert('- Por favor, informe o ENDERE√áO.') </script>";
 	}	
 	else if (empty($txtBairro)){ 
 	echo "<script> alert('- Por favor, informe o BAIRRO.') </script>";
@@ -297,7 +312,7 @@ if ($Alterar == 'Alterar') {
 	echo "<script> alert('- Por favor, informe a SENHA.') </script>";
 	}
 	else if (empty($nome)){ 
-	echo "<script> alert('- Por favor, informe o NOME de USU¡RIO.') </script>";
+	echo "<script> alert('- Por favor, informe o NOME de USU√ÅRIO.') </script>";
 	}	
 	if (!empty($txtCPF) and !empty($txtRG) and !empty($txtOrgExp) and !empty($txtProf) and !empty($txtNasc)
 	 and !empty($sexo) and !empty($civil) and !empty($txtEnd) and !empty($txtBairro) and !empty($txtCEP)
@@ -309,7 +324,7 @@ $txtCPF = $_POST["txtCPF"];
 $sql = "SELECT * from professores where cpf = '$txtCPF'";
 $res = pg_query($sql);
 if ( pg_num_rows($res) <= 0 ) {
-echo "<script> alert('Este professor n„o foi cadastrado!') </script>";
+	 echo "<script> alert('Este professor n√£o foi cadastrado!') </script>";
 } else {
 	$txtCPF = $_POST["txtCPF"];
 	$txtRG = $_POST["txtRG"];
@@ -337,17 +352,17 @@ $sql = "UPDATE professroes set rg='$txtRG', org_exp='$txtOrgExp', professor='$tx
        civil='$civil', endereco='$txtEnd', bairro='$txtBairro', cep='$txtCEP', cidade='$txtCidade', uf='$uf', telefone='$txtTel',       celular='$txtCel', email='$txtEmail', disciplina='$txtDis', turno='$turno', curso='$txtCurso', login='$login', senha='$senha', nome='$nome' where cpf = '$txtCPF'";
 $res = pg_query($sql);
 if (pg_affected_rows($res)) {
-echo "<script> alert('InformaÁıes alteradas com sucesso!') </script>";
-echo "<script language='javascript'>window.location.href='pes_func.php'</script>";
+echo "<script> alert('Informa√ß√µes alteradas com sucesso!') </script>";
+"<script language='javascript'>window.location.href='pes_func.php'</script>";
 } else {
-echo "<script> alert('Houveram problemas na alteraÁ„o das informaÁıes') </script>";
+echo "<script> alert('Houveram problemas na altera√ß√£o das informa√ß√µes') </script>";
 				}
 			}
 		}
 	}
 	
-// OperaÁ„o de Exclus„o
-$Excluir = $_POST['Excluir'];
+// Opera√ß√£o de Exclus√£o
+$Excluir = isset($_POST['Excluir']);
 if ($Excluir == 'Excluir') {
 $txtCPF = $_POST["txtCPF"];
   if (empty($txtCPF)){
@@ -358,22 +373,22 @@ $txtCPF = $_POST['txtCPF'];
 $sql = "SELECT * from professores where cpf = '$txtCPF'";
 $res = pg_query($sql);
 if ( pg_num_rows($res) <= 0 ) {
-echo "<script> alert('Este professor n„o foi cadastrado!') </script>";
+echo "<script> alert('Este professor n√£o foi cadastrado!') </script>";
 } else {
 $sql = "DELETE from professores where cpf = '$txtCPF'";
 $res = pg_query($sql);
 if (pg_affected_rows($res)) {
-echo "<script> alert('Professor excluÌdo com sucesso!') </script>";
-echo "<script language='javascript'>window.location.href='pes_func.php'</script>";
+echo "<script> alert('Professor exclu√≠do com sucesso!') </script>";
+"<script language='javascript'>window.location.href='pes_func.php'</script>";
 } else {
-echo "<script> alert('Houveram problemas na exclus„o das informaÁıes') </script>";
+echo "<script> alert('Houveram problemas na exclus√£o das informa√ß√µes') </script>";
 }
 }
 }
 }
 ?>
    <form action="cad_func.php" method="POST" name="FormProf" onSubmit="VerificaCPF();">
-   <div align="right"><span class="aviso">(*) Campos ObrigatÛrios</span></div>
+   <div align="right"><span class="aviso">(*) Campos Obrigat√≥rios</span></div>
 	<fieldset class="box_principal">
 	  <legend class="titulo">Cadastramento - Professores</legend>   
 	 <fieldset class="box_secundario">
@@ -381,26 +396,26 @@ echo "<script> alert('Houveram problemas na exclus„o das informaÁıes') </script>
       <table border="0" align="left" cellspading="2" cellspacing="2">
       <tr>
        <td align="right">CPF:</td>
-       <td align="left"><input type="text" name="txtCPF" value="<?php echo $txtCPF; ?>" size="15" maxlength="11">
+       <td align="left"><input type="text" name="txtCPF" value="<?php $txtCPF; ?>" size="15" maxlength="11">
 					    <span class="aviso">*</span>&nbsp;
 	   					<input type="submit" name="Pesquisar" value="Pesquisar" class="botao">
 	   </td>
       </tr>
 	  <tr>
        <td align="right">Identidade:</td>
-       <td align="left"><input type="text" name="txtRG" value="<?php echo $txtRG; ?>" size="15" maxlength="10"/>
+       <td align="left"><input type="text" name="txtRG" value="<?php $txtRG; ?>" size="15" maxlength="10"/>
 	   <span class="aviso">*</span>
 	   </td>
       </tr>
 	  <tr>
 	   <td align="right">Org. Exp.:</td>
-       <td align="left"><input type="text" name="txtOrgExp" value="<?php echo $txtOrgExp; ?>" size="15" maxlength="20"/>
+       <td align="left"><input type="text" name="txtOrgExp" value="<?php $txtOrgExp; ?>" size="15" maxlength="20"/>
 	   <span class="aviso">*</span>
 	   </td>
       </tr>
 	  <tr>
        <td align="right">Professor(a):</td>
-       <td align="left"><input type="text" name="txtProf" value="<?php echo $txtProf; ?>" maxlenght="80" size="30">
+       <td align="left"><input type="text" name="txtProf" value="<?php $txtProf; ?>" maxlenght="80" size="30">
 	   <span class="aviso">*</span>
 	   </td>
        <td align="right">Sexo:</td>
@@ -411,7 +426,7 @@ echo "<script> alert('Houveram problemas na exclus„o das informaÁıes') </script>
       </tr>
       <tr>
        <td align="right">Data de Nasc.:</td>
-       <td align="left"><input type="text" name="txtNasc" value="<?php echo $txtNasc; ?>" size="15" maxlength="10" onKeyUp="mascara_txtNasc()" />
+       <td align="left"><input type="text" name="txtNasc" value="<?php $txtNasc; ?>" size="15" maxlength="10" onKeyUp="mascara_txtNasc()" />
 	   <span class="aviso">*</span>
 	   </td>
        <td align="right">Estado Civil:</td>
@@ -420,7 +435,7 @@ echo "<script> alert('Houveram problemas na exclus„o das informaÁıes') </script>
                         <option value="Solteiro(a)">Solteiro(a)</option>
                         <option value="Casado(a)">Casado(a)</option>
                         <option value="Divorciado(a)">Divorciado(a)</option>
-						<option value="Viuvo(a)">Vi˙vo(a)</option>
+						<option value="Viuvo(a)">Vi√∫vo(a)</option>
                         </select>
 						<span class="aviso">*</span>
 						</td>
@@ -429,42 +444,42 @@ echo "<script> alert('Houveram problemas na exclus„o das informaÁıes') </script>
 	</fieldset>
 	<p>
 	  <fieldset class="box_secundario">
-      <legend class="titulo">EndereÁo</legend>
+      <legend class="titulo">Endere√ßo</legend>
 	  <table border="0" align="left" cellspading="2" cellspacing="2"> 
 	  <tr>
-       <td align="right">EndereÁo:</td>
-       <td align="left"><input type="text" name="txtEnd" value="<?php echo $txtEnd; ?>" size="30" maxlength="60" />
+       <td align="right">Endere√ßo:</td>
+       <td align="left"><input type="text" name="txtEnd" value="<?php $txtEnd; ?>" size="30" maxlength="60" />
 	   <span class="aviso">*</span>
 	   </td>
       </tr>
 	  <tr>
        <td align="right">Bairro:</td>
-       <td align="left"><input type="text" name="txtBairro" value="<?php echo $txtBairro; ?>" size="15" maxlength="40" />
+       <td align="left"><input type="text" name="txtBairro" value="<?php $txtBairro; ?>" size="15" maxlength="40" />
 	   <span class="aviso">*</span>
 	   </td>
        <td align="right">Cidade:</tvd>
-       <td align="left"><input type="text" name="txtCidade" value="<?php echo $txtCidade; ?>" size="30" maxlength="40" />
+       <td align="left"><input type="text" name="txtCidade" value="<?php $txtCidade; ?>" size="30" maxlength="40" />
 	   <span class="aviso">*</span>
 	   </td>
        <tr>
 	   <td align="right">CEP:</td>
-       <td align="left"><input type="text" name="txtCEP" size="15" value="<?php echo $txtCEP; ?>" maxlength="9" onKeyUp="mascara_cep()" />
+       <td align="left"><input type="text" name="txtCEP" size="15" value="<?php $txtCEP; ?>" maxlength="9" onKeyUp="mascara_cep()" />
 	   <span class="aviso">*</span>
 	   </td>
        <td align="right">UF:</td>
        <td align="left"><select name="uf">
 					<?php
 					include 'conexao/conexao.php';
-					$sql_est = "select * from estados;";	
+					$sql_est = "SELECT * from estados;";	
 					$res = pg_query($sql_est);
 				     for($i=0; $i<pg_num_rows($res); $i++){
 					  $uf  = pg_fetch_result($res, $i,'uf');
 					  $est = pg_fetch_result($res, $i,'estado');
 					  $xuf = pg_fetch_result($res, $i,'uf');
 						  if($uf == $xuf){
-						    echo "<option value=\"$xuf\" selected>$uf</option>>";
+						   echo "<option value=\"$xuf\" selected>$uf</option>>";
   								}else{
-								    echo "<option value=\"$xuf\"> $uf</option>>";
+								 echo "<option value=\"$xuf\"> $uf</option>>";
   									}
 								}			
 					?>
@@ -480,19 +495,19 @@ echo "<script> alert('Houveram problemas na exclus„o das informaÁıes') </script>
 	  <table border="0" align="left" cellspading="2" cellspacing="2"> 
 	  <tr>
        <td align="right">Tel. Residencial:</td>
-       <td align="left"><input type="text" name="txtTel" value="<?php echo $txtTel; ?>" size="15" maxlength="12" onKeyUp="mascara_telefone()" />
+       <td align="left"><input type="text" name="txtTel" value="<?php $txtTel; ?>" size="15" maxlength="12" onKeyUp="mascara_telefone()" />
 	   <span class="aviso">*</span>
 	   </td>
       </tr>
 	  <tr>
        <td align="right">Tel. Celular:</td>
-       <td align="left"><input type="text" name="txtCel" value="<?php echo $txtCel; ?>" size="15" maxlength="12" onKeyUp="mascara_celular()" />
+       <td align="left"><input type="text" name="txtCel" value="<?php $txtCel; ?>" size="15" maxlength="12" onKeyUp="mascara_celular()" />
 	   <span class="aviso">*</span>
 	   </td>
       </tr>
 	  <tr>
        <td align="right">Email:</td>
-       <td align="left"><input type="text" name="txtEmail" value="<?php echo $txtEmail; ?>" size="30" maxlength="40" />
+       <td align="left"><input type="text" name="txtEmail" value="<?php $txtEmail; ?>" size="30" maxlength="40" />
 	   <span class="aviso">*</span>
 	   </td>
       </tr>
@@ -501,14 +516,14 @@ echo "<script> alert('Houveram problemas na exclus„o das informaÁıes') </script>
 	  </fieldset>
      <p>
 	   <fieldset class="box_secundario">
-      <legend class="titulo">OpÁıes de Cargo</legend>
+      <legend class="titulo">Op√ß√µes de Cargo</legend>
 	  <table border="0" align="left" cellspading="2" cellspacing="2">
 	  <tr> 
 	   <td align="left">Escolha a disciplina a ser lecionada:</td>
 	  <tr>
 	  <tr>
-	  <td align="left"><input type="text" name="txtDis" value="<?php echo $txtDis;?>" maxlenght="40" size="25">&nbsp;
-	    <a href="#" onClick="window.open('../SGDR/popups/popupdisciplina.php', 'popupdisciplina', 'STATUS=NO, TOOLBAR=NO, LOCATION=NO,        DIRECTORIES=NO, RESISABLE=NO, SCROLLBARS=YES, TOP=50, LEFT=100, WIDTH=400, HEIGHT=400');">
+	  <td align="left"><input type="text" name="txtDis" value="<?php $txtDis;?>" maxlenght="40" size="25">&nbsp;
+	    <a href="#" onClick="window.open('../projeto-sgdr/popups/popupdisciplina.php', 'popupdisciplina', 'STATUS=NO, TOOLBAR=NO, LOCATION=NO,        DIRECTORIES=NO, RESISABLE=NO, SCROLLBARS=YES, TOP=50, LEFT=100, WIDTH=400, HEIGHT=400');">
 		<img src="imagens/icone_buscar.gif" alt="Procurar Disciplinas" border="0"></a>&nbsp;
 		<span class="aviso">*</span>
 	  </td>
@@ -518,7 +533,7 @@ echo "<script> alert('Houveram problemas na exclus„o das informaÁıes') </script>
 	  <td align="left">Curso:</td>
       </tr>
 	  <tr>
-	  <td align="left"><input type="text" name="txtCurso" value="<?php echo $txtCurso;?>" maxlenght="40" size="25">
+	  <td align="left"><input type="text" name="txtCurso" value="<?php $txtCurso;?>" maxlenght="40" size="25">
 	  <span class="aviso">*</span>&nbsp;
 	  </td>
 	  <tr>				
@@ -527,8 +542,8 @@ echo "<script> alert('Houveram problemas na exclus„o das informaÁıes') </script>
 	  <tr>
 	   <td align="left"><select name="turno">
                         <option value="">Selecione o turno</option>
-                        <option value="Manh„ - 08:00 ‡s 12:00">Manh„ - 08:00 ‡s 12:00</option>
-                        <option value="Noite - 19:00 ‡s 22:00">Noite - 19:00 ‡s 22:00</option>
+                        <option value="Manh√£ - 08:00 √†s 12:00">Manh√£ - 08:00 √†s 12:00</option>
+                        <option value="Noite - 19:00 √†s 22:00">Noite - 19:00 √†s 22:00</option>
                         </select>
 						<span class="aviso">*</span>
 						</td>
@@ -537,23 +552,23 @@ echo "<script> alert('Houveram problemas na exclus„o das informaÁıes') </script>
 	 </fieldset>
 	 <p>
 	 <fieldset class="box_secundario">
-      <legend class="titulo">Login - Usu·rio</legend>
+      <legend class="titulo">Login - Usu√°rio</legend>
 	  <table border="0" align="left" cellspading="2" cellspacing="2">
        <tr>
        <td align="right">Login:</td>
-       <td align="left"><input type="type" name="login" value="<?php echo $login; ?>" maxlength="10" size="20">
+       <td align="left"><input type="type" name="login" value="<?php $login; ?>" maxlength="10" size="20">
 	   <span class="aviso">*</span>&nbsp;
 	   </td>
 	   </tr>
 	   <tr>
        <td align="right">Senha:</td>
-       <td align="left"><input type="password" name="senha" value="<?php echo $senha; ?>" maxlength="10" size="20">
+       <td align="left"><input type="password" name="senha" value="<?php $senha; ?>" maxlength="10" size="20">
 	   <span class="aviso">*</span>
 	   </td>
       </tr>
 	  <tr> 
 	  <td align="right">Nome:</td>
-       <td align="left"><input type="type" name="nome" value="<?php echo $nome;?>" maxlength="20" size="20">
+       <td align="left"><input type="type" name="nome" value="<?php $nome;?>" maxlength="20" size="20">
 	   <span class="aviso">*</span>&nbsp;
 	   </td>
       </tr>
@@ -573,7 +588,7 @@ echo "<script> alert('Houveram problemas na exclus„o das informaÁıes') </script>
 	 <hr size="1">
  </div>
  <div id="rodape">
-Copyright© SGDR - Sistema de Gerenciamento Did·tico Remoto. Todos os direitos reservados.
+Copyright&copy; SGDR - Sistema de Gerenciamento Did√°ico Remoto. Todos os direitos reservados.
  </div>
 </div>
 
