@@ -11,7 +11,7 @@ Projeto Acadêmico - Faculdade Simonsen Ano: 2008
 - Cadastro de Disciplinas
 - Cadastro de Usuários
 - Relatórios
-- Gerenciamento de Envios
+- Gerenciamento de Envios de Materias Didáticos
 
 ## Tecnologias utilizada
 * HTML5 
