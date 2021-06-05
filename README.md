@@ -22,4 +22,3 @@ Projeto Acadêmico - Faculdade Simonsen Ano: 2008
 
 ## Instituição onde foi implantada o sistema
 ![logotipo](https://user-images.githubusercontent.com/6005104/120896519-509d9d00-c5f8-11eb-9475-6b49605ab347.png)
-
