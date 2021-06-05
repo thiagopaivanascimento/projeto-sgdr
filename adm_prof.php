@@ -2,7 +2,9 @@
 include 'conexao/conexao.php';
 include 'config/valida_prof.php';
 ?>
-<html>
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <title>::EETEP - Secretaria Virtual::</title>
 
@@ -11,22 +13,21 @@ include 'config/valida_prof.php';
 <script type="text/javascript" src="scripts/menu.js"></script>
 
 </head>
-
 <body onLoad="horizontal();" vlink="white" alink="white"> 
  <div id="geral">
  <div id="topo">
  </div>
 <div id="nav">
 <ul id="menu_dropdown" class="menubar">
-        <li class="submenu"><a href="adm_prof.php"><img src="imagens/icone_home.gif" alt="Página Inicial">Home</a></li>
-		<li class="submenu"><a href="#"><img src="imagens/icone_cli.gif" alt="Retificação de dados cadastrais">Retificação</a></li>
-        <li class="submenu"><a href="#"><img src="imagens/icone_pasta.gif" alt="Enviar Material Didático">Enviar</a></li>
+        <li class="submenu"><a href="adm_prof.php"><img src="imagens/icone_home.gif" alt="PÃ¡gina Inicial">Home</a></li>
+		<li class="submenu"><a href="#"><img src="imagens/icone_cli.gif" alt="RetificaÃ§Ã£o de dados cadastrais">RetificaÃ§Ã£o</a></li>
+        <li class="submenu"><a href="envio_material.php"><img src="imagens/icone_pasta.gif" alt="Enviar Material DidÃ¡tico">Enviar</a></li>
     </li>
    <li class="submenu"><a href="#"><img src="imagens/icone_ajuda.gif" alt="Manual">Ajuda</a></li>
      <ul class="menu">
          <li><a href="manual.pdf">Manual do Professor</a></li>
         </ul>
-   <li class="submenu"><a href="login_prof.php" onClick="return confirm('Você deseja realmente sair?')"><img src="imagens/icone_sair.gif" alt="Logout">Sair</a></li>
+   <li class="submenu"><a href="logout.php" onClick="return confirm('VocÃª deseja realmente sair?')"><img src="imagens/icone_sair.gif" alt="Logout">Sair</a></li>
 </ul>
  </div>
  <div id="conteudo">
@@ -42,24 +43,24 @@ include 'config/valida_prof.php';
 	<tr>
     <td  colspan="3" bgcolor="#333333" align="center" height="50" width="675">
 	<span class="saudacao">
-	Você está conectado ao Bano de Dados da<br>
-	EETEP - Escola de Educação Teológia Pentecostal
+	VocÃª estÃ¡ conectado ao Bano de Dados da<br>
+	EETEP - Escola de EducaÃ§Ã£o Teologia Pentecostal
 	</span>
 	</td>
 	</tr> 
 	<tr>
-    <td align="left" height="400" width="225"><img src="imagens/anun_prof_material.jpg"></td>
-	<td align="left" height="400" width="225"><img src="imagens/anun_prof_retif.jpg"></td>
-    <td align="left" height="400" width="225"><img src="imagens/anun_prof_manual.jpg"></td>
+    <td align="left" width="225"><img src="imagens/anun_prof_material.jpg"></td>
+	<td align="left" width="225"><img src="imagens/anun_prof_retif.jpg"></td>
+    <td align="left" width="225"><img src="imagens/anun_prof_manual.jpg"></td>
 	</tr> 
   </table>
  </div>
 <br>
  <div id="rodape">
-  Copyright© SGDR - Sistema de Gerenciamento Didático Remoto. Todos os direitos reservados.
+  Copyright&copy; SGDR - Sistema de Gerenciamento DidÃ¡tico Remoto. Todos os direitos reservados.
    </div>
  </div>
 </div>
+    
 </body>
 </html>
-

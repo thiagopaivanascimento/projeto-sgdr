@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="css/link.css" type="text/css" />
     <!-- Arquivo JavaScript -->
     <script type="text/javascript" src="scripts/menu.js"></script>
-	<script type="text/javascript" src="scripts/scriptFormAluno.js"></script>
+	<script type="text/javascript" src="scripts/scriptFormProf.js"></script>
 </head>
 
 <body onLoad="horizontal();" vlink="white" alink="white"> 
@@ -93,7 +93,7 @@
 	$txtBairro = $_POST["txtBairro"];
 	$txtCEP = $_POST["txtCEP"];
 	$txtCidade = $_POST["txtCidade"];
-	$uf = isset($_POST["uf"]);
+	$uf = $_POST["uf"];
 	$txtTel = $_POST["txtTel"];
 	$txtCel = $_POST["txtCel"];
 	$txtEmail = $_POST["txtEmail"];
@@ -175,7 +175,9 @@
 	 if (pg_num_rows($res)){
 	  echo "<script> alert('Professor já cadastrado.') </script>";
 	   }else{
-	     $sql = "INSERT into professores(cpf, rg, org_exp, professor, nascimento, sexo, civil, endereco, bairro, cep, cidade, uf, telefone, celular, email,  disciplina, turno, curso, login, senha, nome) values ('$txtCPF', '$txtRG', '$txtOrgExp', '$txtProf', '$txtNasc', '$sexo', '$civil', '$txtEnd', '$txtBairro', '$txtCEP', '$txtCidade', '$uf', '$txtTel', '$txtCel', '$txtEmail', '$txtDis', '$turno', '$txtCurso', '$login', '$senha', '$nome')";
+	     $sql = "INSERT INTO professores(
+			 cpf, rg, org_exp, professor, nascimento, sexo, civil, endereco, bairro, cep, cidade, uf,telefone, celular, email, disciplina, curso, turno, login, senha, nome) values (
+				 '$txtCPF', '$txtRG', '$txtOrgExp', '$txtProf', '$txtNasc', '$sexo', '$civil', '$txtEnd', '$txtBairro', '$txtCEP', '$txtCidade', '$uf', '$txtTel', '$txtCel', '$txtEmail', '$txtDis', '$txtCurso','$turno',  '$login', '$senha', '$nome')";
 	     $res = pg_query($sql);
 		  if(pg_affected_rows($res)){
 		   mkdir ("C:/wamp64/www/projeto-sgdr/materiais/$txtProf", 0700);
@@ -236,7 +238,7 @@ if ($Alterar == 'Alterar') {
 	$txtRG = $_POST["txtRG"];
 	$txtOrgExp = $_POST["txtOrgExp"];
 	$txtProf = $_POST["txtProf"];
-    $sexo = $_POST["sexo"];
+    $sexo = isset($_POST["sexo"]);
 	$txtNasc = $_POST["txtNasc"];
 	$civil = $_POST["civil"];
 	$txtEnd = $_POST["txtEnd"];
@@ -468,18 +470,19 @@ echo "<script> alert('Houveram problemas na exclusão das informações') </scri
 	   </td>
        <td align="right">UF:</td>
        <td align="left"><select name="uf">
-					<?php
-					include 'conexao/conexao.php';
-					$sql_est = "SELECT * from estados;";	
+	  				 <?php
+					//include 'conexao/conexao.php';
+					$sql_est = "SELECT * FROM estados ORDER BY estado;";	
 					$res = pg_query($sql_est);
-				     for($i=0; $i<pg_num_rows($res); $i++){
+				     for($i=0; $i < pg_num_rows($res); $i++){
+					  //var_dump($res);	 
 					  $uf  = pg_fetch_result($res, $i,'uf');
 					  $est = pg_fetch_result($res, $i,'estado');
 					  $xuf = pg_fetch_result($res, $i,'uf');
 						  if($uf == $xuf){
-						   echo "<option value=\"$xuf\" selected>$uf</option>>";
+						    echo "<option value=\"$xuf\" selected>$uf</option>>";
   								}else{
-								 echo "<option value=\"$xuf\"> $uf</option>>";
+								   echo "<option value=\"$xuf\"> $uf </option>>";
   									}
 								}			
 					?>

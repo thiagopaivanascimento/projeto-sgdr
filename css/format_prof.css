@@ -2,15 +2,15 @@ body {
 	margin-top: 3px;
 	padding:0;
 	border:0;
-	font: 11px/1.5 calibri;
+	font-family: Arial, Helvetica, sans-serif;
 	background-color: #333333;
 	text-align:center;
 	}
 	
 #geral {
 	width:750px;     
-	height: 650px;
-	margin: 5px;
+	height: auto;
+	margin: 0 auto;
 	text-align: left;
 	background-color: white;
 }
@@ -21,33 +21,31 @@ body {
 	background-image: url(../imagens/fundo_topo_preta.jpg);
 }
 
+#nav {
+	width:750px;
+	height: 50px;
+	clear: both;
+    /*border-bottom: #FFFFFF 1px;*/
+	color: #FFFFFF;
+	background: url(../imagens/back_preta.gif) repeat-x;
+}
+
 #conteudo {
 	clear: both;
 	width: 740px;
     margin: 5px;
 	text-align:justify;
-    height: 460px;	
+    height: auto;	
 }
 	
-#nav {
-	width:750px;
-	height: 20px;
-	float: inherit;
-	clear: both;
-    border-bottom: #FFFFFF 1px;
-	color: #FFFFFF;
-}
-	
-
-
 #rodape{
-    width: 750px;
+    width: 745px;
 	height: 30px;
+	line-height: 18px;
 	clear: both;
 	float: inherit;
 	background-image: url(../imagens/back_preta.gif);
 	text-align: right; 
-	font-family: calibri;
 	font-size: 12px;
 	color: #FFFFFF;
 	padding-top: 5px;
@@ -55,50 +53,46 @@ body {
 }
 
 h5{
-	color: #1875b0;
-	font-family: calibri;
+	color: #000;
 }
 
 
 hr {
    width: 730px;
-   color: #003366;
+   color: #000;
    margin: 5px;
 }
 
 a{
-	font-family: calibri;
 	text-decoration: none;
 	color: #000000;
 }
 
 a:hover{
-	font-family: calibri;
 	text-decoration: underline;
-	color: #1875b0;
+	color: #000;
 }
 
 .mensagem{
-	color: #003366;
-	font-family: calibri;
+	color: #000;
 	font-size: 14px;
 }
 
 .box{
      width: 600px;
-     border: 1px solid #1875b0;
+     border: 1px solid #000;
      display: block;
 }
 
 .box_secundario{
 	 width: 600px;
-     border: 1px solid #1875b0;
+     border: 1px solid #000;
      display: block;
 	 margin-left: 15px;
 }
 .box_principal{
      width: 650px;
-     border: 1px solid #1875b0;
+     border: 1px solid #000;
      margin-left: 40px;
      padding-left: 5px;
 	 display: block;
@@ -110,49 +104,44 @@ a:hover{
 	background-image: url(../imagens/color_botao_preta.jpg);
 	color: white;
 	font: Trebuchet MS','Arial;
-	border: 1px outset #5299C5;
+	border: 1px outset #000;
 	text-decoration: none;
 	font-weight: bold;
 }
 
 
 .titulo{
-      font-family: calibri;
-      color: #5299C5;
+      color: #000;
       font-size: 14px;
 }
 
 .titulo_principal{
-	font-family: calibri;
-    color: #5299C5;
+    color: #000;
     font-size: 16px;
 }
 
 .corpo_tabela {
-	border: #1875b0 solid 1px;
+	border: #000 solid 1px;
 }	
 
 .topo_tabela {
 	font-size: 14px;
-	font-family: calibri;
 	font-weight:bold;
 	color:white;
-	background-image: url(../imagens/botao.jpg);
+	background-image: url(../imagens/color_botao_preta.jpg);
 	text-align: center;
-	border: #5299C5 solid 1px;
+	border: #000 solid 1px;
 }
 
 .detalhe_tabela {
 	font-size:12px;
-	font-family: calibri;
 	color:black;
-	border: #1875b0 solid 1px;
+	border: #000 solid 1px;
 	text-align: center;
 }
 
 
 .saudacao{
 	font-size: 14px;
-	font-family: 'Trebuchet MS','Arial';
 	color:#FFFFFF;
 }

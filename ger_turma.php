@@ -191,7 +191,7 @@ echo "<script> alert('Esta turma não foi cadastrada!') </script>";
 $sql = "UPDATE turmas set curso='$txtCurso', turno='$turno', sala='$sala', vaga='$vaga' where turma = '$txtTurma'";
 $res = pg_query($sql);
 if (pg_affected_rows($res)) {
-echo "<script> alert('Informa��es alteradas com sucesso!') </script>";
+echo "<script> alert('Informações alteradas com sucesso!') </script>";
 echo "<script language='javascript'>window.location.href='pes_turma.php'</script>";
 } else {
 echo "<script> alert('Houveram problemas na alteração das informações') </script>";

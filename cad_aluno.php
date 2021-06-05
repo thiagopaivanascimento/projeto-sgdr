@@ -219,11 +219,11 @@
 		$txtRG = $_POST["txtRG"];
 		$txtOrgExp = $_POST["txtOrgExp"];
 		$txtAluno = $_POST["txtAluno"];
-		$sexo = $_POST["sexo"];
+		$sexo = isset($_POST["sexo"]);
 		$txtNasc = $_POST["txtNasc"];
 		$civil = $_POST["civil"];
-		$txtNatural = $_POST["txtNatural"];
-		$txtNacional = $_POST["txtNacional"];
+		$txtNatural = isset($_POST["txtNatural"]);
+		$txtNacional = isset($_POST["txtNacional"]);
 		$txtEnd = $_POST["txtEnd"];
 		$txtBairro = $_POST["txtBairro"];
 		$txtCEP = $_POST["txtCEP"];
@@ -425,7 +425,7 @@
 					$sql_est = "SELECT * FROM estados ORDER BY estado;";	
 					$res = pg_query($sql_est);
 				     for($i=0; $i < pg_num_rows($res); $i++){
-					  var_dump($res);	 
+					  //var_dump($res);	 
 					  $uf  = pg_fetch_result($res, $i,'uf');
 					  $est = pg_fetch_result($res, $i,'estado');
 					  $xuf = pg_fetch_result($res, $i,'uf');

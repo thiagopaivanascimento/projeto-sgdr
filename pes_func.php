@@ -91,7 +91,8 @@
 	  //Conexão com o banco de dados
 	  include 'conexao/conexao.php';
 	
-	
+      $filtrar = isset($_POST['Filtrar']);
+	  if ($filtrar == 'Filtrar') {
 	$txtProf = $_POST["txtProf"];		
       $sql = "SELECT * from professores where professor like '%$txtProf%' order by professor";
 	  $res = pg_query($conexao, $sql); 
@@ -131,7 +132,7 @@
 	
 		echo "</table>";
 	  echo "<br>";
-	  
+    }
 	
 	pg_close($conexao);
 	

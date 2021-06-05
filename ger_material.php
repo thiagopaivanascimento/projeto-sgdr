@@ -75,10 +75,10 @@
    <hr size="1">
     <br>
 <?php
-	//Conex�o ao Banco de Dados
+	//Conexão ao Banco de Dados
 	include 'conexao/conexao.php';
 
-	//Opera��o de Inclus�o
+	//Operação de Inclusão
 	$Incluir = isset($_POST["Incluir"]);
 	 if ($Incluir == 'Incluir'){
 	
@@ -109,8 +109,9 @@
 	 if (pg_num_rows($res)){
 	  echo "<script> alert('Material Didático já cadastrado.') </script>";
 	   }else{
-	     $sql = "INSERT into materiais(material, data, professor, disciplina, curso) values ('$txtMat', '$txtNasc', 
-		 '$txtProf', '$txtDis', '$txtCurso')";
+	     $sql = "INSERT into materiais(
+			 material, disciplina, curso, data, professor) values (
+				 '$txtMat', '$txtDis', '$txtCurso', '$txtNasc', '$txtProf')";
 	     $res = pg_query($sql);
 		  if(pg_affected_rows($res)){
 		   echo "<script> alert('Material Didático cadastrado com sucesso!') </script>";

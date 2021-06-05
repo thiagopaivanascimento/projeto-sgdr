@@ -2,19 +2,19 @@ body {
 	margin-top: 3px;
 	padding:0;
 	border:0;
-	font: 11px/1.5 calibri;
+	font-family: Arial, Helvetica, sans-serif;
 	background-color: #003366;
 	text-align:center;
 	color: #003366;
-	}
+}
 	
 #geral {
 	width:750px;     
-	height: 650px;
-	margin: 5px;
+	height: auto;
+	/*margin: 5px;*/
+	margin: 0 auto;
 	text-align: left;
-	background-color: white;
-	color: #003366;
+	background-color: #FFF;
 }
 	
 #topo {
@@ -23,33 +23,35 @@ body {
 	background-image: url(../imagens/fundo_topo_cinza.jpg);
 }
 
+#nav {
+	width:750px;
+	height: 50px;
+	clear: both;
+    border-bottom: #FFFFFF 1px;
+	color: #FFFFFF;
+	background: url(../imagens/back_cinza.gif) repeat-x;
+}
+	
+
 #conteudo {
 	clear: both;
 	width: 740px;
     margin: 5px;
 	text-align:justify;
-    height: 460px;	
+    height: auto;	
 }
 	
-#nav {
-	width:750px;
-	height: 20px;
-	float: inherit;
-	clear: both;
-    border-bottom: #FFFFFF 1px;
-	color: #FFFFFF;
-}
-	
+
 
 
 #rodape{
-    width: 750px;
+    width: 745px;
 	height: 30px;
+	line-height: 18px;
 	clear: both;
 	float: inherit;
 	background-image: url(../imagens/back_cinza.gif);
 	text-align: right; 
-	font-family: calibri;
 	font-size: 12px;
 	color: #003366;
 	padding-top: 5px;
@@ -58,7 +60,6 @@ body {
 
 h5{
 	color: #1875b0;
-	font-family: calibri;
 }
 
 
@@ -69,20 +70,17 @@ hr {
 }
 
 a{
-	font-family: calibri;
 	text-decoration: none;
 	color: #000000;
 }
 
 a:hover{
-	font-family: calibri;
 	text-decoration: underline;
 	color: #1875b0;
 }
 
 .mensagem{
 	color: #003366;
-	font-family: calibri;
 	font-size: 14px;
 }
 
@@ -139,14 +137,13 @@ a:hover{
 	font-family: calibri;
 	font-weight:bold;
 	color:white;
-	background-image: url(../imagens/botao.jpg);
+	background-image: url(../imagens/color_botao_cinza.jpg);
 	text-align: center;
 	border: #5299C5 solid 1px;
 }
 
 .detalhe_tabela {
 	font-size:12px;
-	font-family: calibri;
 	color:black;
 	border: #1875b0 solid 1px;
 	text-align: center;
@@ -155,6 +152,5 @@ a:hover{
 
 .saudacao{
 	font-size: 14px;
-	font-family: 'Trebuchet MS','Arial';
 	color: #003366;;
 }
